@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Error View Controller-->
+        <scene sceneID="5SH-Tu-Wt2">
+            <objects>
+                <viewController storyboardIdentifier="ErrorViewController" id="3R8-ZV-2YU" customClass="ErrorViewController" customModule="Openfield" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fg4-zR-dzb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0as-fK-5fL" userLabel="Folding Logo">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="107.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prosperaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="KeV-Xn-UdZ">
+                                        <rect key="frame" x="21" y="65.5" width="116" height="32"/>
+                                    </imageView>
+                                </subviews>
+                                <accessibility key="accessibilityConfiguration" label="foldingBar"/>
+                                <constraints>
+                                    <constraint firstItem="KeV-Xn-UdZ" firstAttribute="leading" secondItem="0as-fK-5fL" secondAttribute="leading" constant="21" id="Bev-Lj-d3U"/>
+                                    <constraint firstAttribute="bottom" secondItem="KeV-Xn-UdZ" secondAttribute="bottom" constant="10" id="CW8-vd-cic"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zP-Ij-Cxi">
+                                <rect key="frame" x="41.5" y="224" width="331" height="448"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inboxErrorState" translatesAutoresizingMaskIntoConstraints="NO" id="zhk-aN-GZd">
+                                        <rect key="frame" x="95.5" y="0.0" width="140" height="157"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="IWu-SX-hMW"/>
+                                            <constraint firstAttribute="height" constant="157" id="iSp-yA-zhV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpw-k4-6xw" customClass="Title3BoldPrimary" customModule="Openfield" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="171" width="331" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="InboxListErrorTitle"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoC-95-HZm" customClass="BodyRegularPrimary" customModule="Openfield" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="197.5" width="331" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="InboxListErrorSubtitle"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXi-30-6iJ" customClass="Button2" customModule="Openfield" customModuleProvider="target">
+                                        <rect key="frame" x="86.5" y="229" width="158" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="InboxListReloadButton">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="158" id="Aky-mi-ZnB"/>
+                                            <constraint firstAttribute="height" constant="50" id="Kpq-dJ-gvq"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="SoC-95-HZm" secondAttribute="trailing" id="0W6-2W-wtP"/>
+                                    <constraint firstAttribute="trailing" secondItem="gpw-k4-6xw" secondAttribute="trailing" id="5V9-vi-gB7"/>
+                                    <constraint firstItem="CXi-30-6iJ" firstAttribute="top" secondItem="SoC-95-HZm" secondAttribute="bottom" constant="11" id="VTp-72-RhS"/>
+                                    <constraint firstItem="gpw-k4-6xw" firstAttribute="centerX" secondItem="1zP-Ij-Cxi" secondAttribute="centerX" id="WOw-qq-fd8"/>
+                                    <constraint firstItem="SoC-95-HZm" firstAttribute="top" secondItem="gpw-k4-6xw" secondAttribute="bottom" constant="6" id="kcS-2A-LYQ"/>
+                                    <constraint firstItem="CXi-30-6iJ" firstAttribute="centerX" secondItem="1zP-Ij-Cxi" secondAttribute="centerX" id="kuV-UG-h3h"/>
+                                    <constraint firstItem="SoC-95-HZm" firstAttribute="leading" secondItem="1zP-Ij-Cxi" secondAttribute="leading" id="mpQ-uy-La6"/>
+                                    <constraint firstItem="zhk-aN-GZd" firstAttribute="top" secondItem="1zP-Ij-Cxi" secondAttribute="top" id="ogR-ik-0EN"/>
+                                    <constraint firstItem="gpw-k4-6xw" firstAttribute="top" secondItem="zhk-aN-GZd" secondAttribute="bottom" constant="14" id="r8Q-NK-eYO"/>
+                                    <constraint firstItem="zhk-aN-GZd" firstAttribute="centerX" secondItem="1zP-Ij-Cxi" secondAttribute="centerX" id="rm2-31-YgU"/>
+                                    <constraint firstItem="gpw-k4-6xw" firstAttribute="leading" secondItem="1zP-Ij-Cxi" secondAttribute="leading" id="w2S-cM-GHb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JlQ-Y7-D9E"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1zP-Ij-Cxi" firstAttribute="centerY" secondItem="fg4-zR-dzb" secondAttribute="centerY" id="2aw-M7-Xca"/>
+                            <constraint firstItem="0as-fK-5fL" firstAttribute="trailing" secondItem="JlQ-Y7-D9E" secondAttribute="trailing" id="INX-qO-HCF"/>
+                            <constraint firstItem="1zP-Ij-Cxi" firstAttribute="height" secondItem="fg4-zR-dzb" secondAttribute="height" multiplier="0.5" id="Qhb-lG-OOZ"/>
+                            <constraint firstItem="0as-fK-5fL" firstAttribute="height" secondItem="fg4-zR-dzb" secondAttribute="height" multiplier="0.12" id="SLS-Eh-1F6"/>
+                            <constraint firstItem="1zP-Ij-Cxi" firstAttribute="centerX" secondItem="fg4-zR-dzb" secondAttribute="centerX" id="Wqm-ub-1Yl"/>
+                            <constraint firstItem="0as-fK-5fL" firstAttribute="top" secondItem="fg4-zR-dzb" secondAttribute="top" id="n7l-xG-KjI"/>
+                            <constraint firstItem="1zP-Ij-Cxi" firstAttribute="width" secondItem="fg4-zR-dzb" secondAttribute="width" multiplier="0.8" id="rbY-No-xnG"/>
+                            <constraint firstItem="0as-fK-5fL" firstAttribute="leading" secondItem="JlQ-Y7-D9E" secondAttribute="leading" id="vdA-mc-RwM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionBtn" destination="CXi-30-6iJ" id="ukb-9n-bzI"/>
+                        <outlet property="headerView" destination="0as-fK-5fL" id="Kzx-OF-zy4"/>
+                        <outlet property="subtitleLbl" destination="SoC-95-HZm" id="s5L-uk-so6"/>
+                        <outlet property="titleLbl" destination="gpw-k4-6xw" id="rIi-Ly-uyl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yAz-Rq-jcm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="-98"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="SoC-95-HZm">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+        <designable name="gpw-k4-6xw">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="inboxErrorState" width="141" height="156"/>
+        <image name="prosperaLogo" width="116" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

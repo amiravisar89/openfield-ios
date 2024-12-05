@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppImageGallery" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="yuq-uM-1yn"/>
+                <outlet property="imagesPager" destination="2sD-td-At7" id="bgj-57-4KX"/>
+                <outlet property="pagerController" destination="PTZ-LL-g2P" id="gCF-JU-fa3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="423" height="252"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i0X-zf-w1w">
+                    <rect key="frame" x="13" y="0.0" width="397" height="252"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2sD-td-At7" customClass="FSPagerView" customModule="FSPagerView">
+                            <rect key="frame" x="0.0" y="0.0" width="397" height="234"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isInfinite" value="NO"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="decelerationDistance">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="interitemSpacing">
+                                    <real key="value" value="13"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhs-HN-Msa">
+                            <rect key="frame" x="0.0" y="234" width="397" height="18"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PTZ-LL-g2P" customClass="FSPageControl" customModule="FSPagerView">
+                                    <rect key="frame" x="15" y="8" width="367" height="10"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="10" id="6Rr-Ph-4mJ"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="PTZ-LL-g2P" firstAttribute="top" secondItem="rhs-HN-Msa" secondAttribute="top" constant="8" id="7eD-Zo-Moe"/>
+                                <constraint firstAttribute="bottom" secondItem="PTZ-LL-g2P" secondAttribute="bottom" id="9qP-by-1sb"/>
+                                <constraint firstAttribute="trailing" secondItem="PTZ-LL-g2P" secondAttribute="trailing" constant="15" id="E6k-44-oLd"/>
+                                <constraint firstItem="PTZ-LL-g2P" firstAttribute="leading" secondItem="rhs-HN-Msa" secondAttribute="leading" constant="15" id="EyH-xj-zY1"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="i0X-zf-w1w" secondAttribute="trailing" constant="13" id="Ljw-9t-ad6"/>
+                <constraint firstItem="i0X-zf-w1w" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hkn-YZ-Bvf"/>
+                <constraint firstAttribute="bottom" secondItem="i0X-zf-w1w" secondAttribute="bottom" id="r7G-Sv-TYP"/>
+                <constraint firstItem="i0X-zf-w1w" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="13" id="z6u-oU-K4o"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
+                    <real key="value" value="20"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="220.61068702290075" y="254.22535211267606"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

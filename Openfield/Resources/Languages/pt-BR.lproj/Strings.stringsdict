@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>unreadInsightsCount</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@unread_insights_count@</string>
+		<key>unread_insights_count</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>u</string>
+			<key>one</key>
+			<string>1 insight não lido</string>
+			<key>other</key>
+			<string>%u Insight não lido</string>
+		</dict>
+	</dict>
+	<key>insightsUpdates</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@insights_updates@</string>
+		<key>insights_updates</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>u</string>
+			<key>one</key>
+			<string>1 insight atualizado:</string>
+			<key>other</key>
+			<string>%u insights atualizados:</string>
+		</dict>
+	</dict>
+	<key>fieldsCount</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@fields_count@</string>
+		<key>fields_count</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>u</string>
+			<key>zero</key>
+			<string>No Fields</string>
+			<key>one</key>
+			<string>1 Campo</string>
+			<key>other</key>
+			<string>%u Campos</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

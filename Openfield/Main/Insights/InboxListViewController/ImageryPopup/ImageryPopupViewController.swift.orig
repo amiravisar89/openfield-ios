@@ -1,0 +1,179 @@
+//
+//  ImageryPopupViewController.swift
+//  Openfield
+//
+//  Created by Daniel Kochavi on 08/12/2019.
+//  Copyright © 2019 Prospera. All rights reserved.
+//
+
+import UIKit
+import RxDataSources
+import RxSwift
+import RxCocoa
+import RxSwiftExt
+import ReactorKit
+import STPopup
+import Resolver
+import SwiftDate
+import NVActivityIndicatorView
+
+class ImageryPopupViewController: UIViewController {
+    
+    static let analyticName = "imagery_popup"
+    
+    @IBOutlet weak var imageryImagesTable: UITableView!
+    @IBOutlet weak var staticTitle: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var closeButton: UIImageView!
+    @IBOutlet weak var popupContent: UIView!
+    @IBOutlet weak var loadingIndicator: NVActivityIndicatorView!
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    
+<<<<<<< HEAD
+    let dataRepository: DataRepository = Resolver.resolve()
+    let dateProvider : DateProvider = Resolver.resolve()
+=======
+    var dataRepository: DataRepository = Resolver.resolve()
+    let farmFilter : FarmFilter = Resolver.resolve()
+>>>>>>> master
+    var disposeBag: DisposeBag = DisposeBag()
+    var flowController: ImageryFlowController!
+    var allImageryDate : Date!
+    var imagerySelected : Imagery!
+    var imagesPresented : [ImageryImage]!
+    var forceRefresh = false
+    
+    override func viewDidLoad() {
+        setupTable()
+        setupStaticColors()
+        setupStaticText()
+        loadImagery()
+        setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setStatusBarColor(color: StyleGuideColor.clear.asUIColor())
+        setupClosingTapGesture()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        setStatusBarColor(color: StyleGuideColor.clear.asUIColor())
+    }
+    
+    private func loadImagery() {
+        Observable.combineLatest(dataRepository.imagery, farmFilter.farms).observeOn(MainScheduler.instance).subscribe { [weak self] (imageris, farms) in
+            guard let self = self else {return}
+            let imagerySelected = imageris.first(where: { (imagery) -> Bool in
+                return imagery.date.weekInYearNum == self.allImageryDate.weekInYearNum
+            })
+            let farmsSelected = farms.filter({$0.isSelected})
+            guard (imagerySelected != nil) else {return}
+            self.imagerySelected = imagerySelected
+            self.imagesPresented = self.imagerySelected.images.sorted(by: {$0.date.dateTruncated(from: .hour) != $1.date.dateTruncated(from: .hour) ? ($0.date.dateTruncated(from: .hour) ?? $0.date) > ($1.date.dateTruncated(from: .hour) ?? $1.date) : $0.field.name.lowercased() < $1.field.name.lowercased()})
+            self.imagesPresented = self.imagesPresented.filter({farmsSelected.compactMap({$0.name}).contains($0.field.farmName)})
+            self.setupData()
+        } onError: { _ in
+            self.closePopup()
+        }.disposed(by: disposeBag)
+    }
+    
+    private func setupData() {
+        imageryImagesTable.delegate = self
+        imageryImagesTable.dataSource = self
+        imageryImagesTable.reloadData()
+        loadingIndicator.isHidden = true
+
+        dateLabel.text = String(format: "%@ - %@ | %@", dateProvider.format(date: allImageryDate.startOfWeek , region: Region.local, format: .short),dateProvider.format(date: allImageryDate.endOfWeek, region: Region.local, format: .short),R.string.strings.fieldsCount(fields_count: UInt(imagesPresented.count)))
+                  
+    }
+    
+    private func setupClosingTapGesture() {
+        blurView.addTapGestureRecognizer { [weak self] in
+            EventTracker.track(event: AnalyticsEventFactory.buildDialogEvent(EventCategory.imageryPopup, ImageryPopupViewController.analyticName, false, [EventParamKey.origin: "click_outside"]))
+            self?.closePopup()
+        }
+        
+        popupContent.layer.cornerRadius = 6
+        popupContent.layer.masksToBounds = true
+    }
+    
+    private func setupStaticColors() {
+        popupContent.backgroundColor = StyleGuideColor.white.asUIColor()
+        loadingIndicator.color = StyleGuideColor.valleyBrand.asUIColor()
+        loadingIndicator.type = .circleStrokeSpin
+        loadingIndicator.startAnimating()
+    }
+    
+    private func setupStaticText() {
+        staticTitle.text = R.string.localizable.imageryNewImageryReceived()
+    }
+    
+    private func setupTable() {
+        imageryImagesTable.register(UINib(resource: R.nib.imageryPopupCellView), forCellReuseIdentifier: R.reuseIdentifier.imageryPopupCellView.identifier)
+    }
+    
+    @objc private func closePopup() {
+        navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+    private func navigateToAnalysis(imageryImage: ImageryImage) {
+        flowController.goToAnalysis(params: AnalysisParams(fieldId: imageryImage.field.id, initialDate: imageryImage.date, initialLayer: imageryImage.layer, origin: "imagery_popup"), animated: true)
+    }
+    
+    func setup() {
+        
+        closeButton
+            .rx
+            .tapGesture()
+            .when(.recognized)
+            .subscribe { [weak self] _ in
+                EventTracker.track(event: AnalyticsEventFactory.buildDialogEvent(EventCategory.imageryPopup, ImageryPopupViewController.analyticName, false, [EventParamKey.origin: "button"]))
+                self?.closePopup()
+        }
+        .disposed(by: disposeBag)
+        
+    }
+}
+
+extension ImageryPopupViewController :  UITableViewDelegate, UITableViewDataSource {
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell : ImageryPopupCellView = tableView.dequeueReusableCell(withIdentifier: "ImageryPopupCellView", for: indexPath) as! ImageryPopupCellView
+    cell.bind(to: imagesPresented[indexPath.row])
+    return cell
+  }
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return imagesPresented.count
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    EventTracker.track(event: AnalyticsEventFactory.buildEvent(EventCategory.imageryPopup,
+                                                               .imageryFieldClick, [EventParamKey.imageryDate: dateProvider.format(date: allImageryDate, format: .short),
+                                                                                    EventParamKey.fieldId: "\(imagerySelected.images[indexPath.row].field.id)"]))
+    self.navigateToAnalysis(imageryImage: imagesPresented[indexPath.row])
+  }
+}
+
+extension ImageryPopupViewController {
+    class func instantiate(with imageryDate: Date, forceRefresh: Bool = false) ->ImageryPopupViewController {
+        let vc = R.storyboard.imageryPopupViewController.imageryPopupViewController()!
+        vc.allImageryDate  = imageryDate
+        vc.forceRefresh = forceRefresh
+        return vc
+    }
+  
+  
+}
+
+protocol HasImageryPopup: HasPopup {}
+
+extension HasImageryPopup where Self: UIViewController {
+    func showImageryPopup(imagery: Imagery, forceRefresh: Bool = false) {
+      let vc = ImageryPopupViewController.instantiate(with: imagery.date, forceRefresh: forceRefresh)
+        let nav = BaseNavigationViewController(rootViewController: vc)
+        nav.modalPresentationStyle = .overCurrentContext
+        present(nav, animated: true, completion: nil)
+    }
+}

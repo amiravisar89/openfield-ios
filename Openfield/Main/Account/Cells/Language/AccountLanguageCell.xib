@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta-Regular.ttf">
+            <string>Averta-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountLanguageCell" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="yea-Qx-wlc" id="VSB-2c-ma2"/>
+                <outlet property="subtitleLabel" destination="F6P-ln-Y01" id="TGB-Nz-uS5"/>
+                <outlet property="titleLabel" destination="WWo-pN-STB" id="plL-j2-y2U"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="yea-Qx-wlc">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWo-pN-STB" customClass="BodyBoldPrimary" customModule="Openfield" customModuleProvider="target">
+                    <rect key="frame" x="43" y="15" width="75.5" height="20"/>
+                    <accessibility key="accessibilityConfiguration" identifier="notificationCellMainText"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="alignment" value="left"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="language_icon_black" translatesAutoresizingMaskIntoConstraints="NO" id="msU-tf-a53">
+                    <rect key="frame" x="0.0" y="15" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="3Fr-tD-WYA"/>
+                        <constraint firstAttribute="height" constant="20" id="8TK-an-7ls"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="zR4-pf-5US">
+                    <rect key="frame" x="390" y="13" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="MRP-1i-d7g"/>
+                        <constraint firstAttribute="width" constant="24" id="ZGN-ha-b1V"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6P-ln-Y01">
+                    <rect key="frame" x="43" y="46.5" width="43" height="13.5"/>
+                    <accessibility key="accessibilityConfiguration" identifier="notificationCellMainText"/>
+                    <fontDescription key="fontDescription" name="Averta-Regular" family="Averta" pointSize="13"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="alignment" value="left"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="xbJ-vA-l9h"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="WWo-pN-STB" firstAttribute="centerY" secondItem="msU-tf-a53" secondAttribute="centerY" id="1OB-Wj-UEn"/>
+                <constraint firstItem="zR4-pf-5US" firstAttribute="centerY" secondItem="WWo-pN-STB" secondAttribute="centerY" id="7VC-v4-4bd"/>
+                <constraint firstItem="xbJ-vA-l9h" firstAttribute="bottom" secondItem="F6P-ln-Y01" secondAttribute="bottom" constant="22" id="GWc-QO-BVu"/>
+                <constraint firstItem="msU-tf-a53" firstAttribute="leading" secondItem="yea-Qx-wlc" secondAttribute="leading" id="GoM-Tb-Vq8"/>
+                <constraint firstItem="F6P-ln-Y01" firstAttribute="top" secondItem="WWo-pN-STB" secondAttribute="bottom" constant="11.5" id="LTX-XY-tS5"/>
+                <constraint firstItem="msU-tf-a53" firstAttribute="top" secondItem="yea-Qx-wlc" secondAttribute="top" constant="15" id="MKh-SP-HB3"/>
+                <constraint firstAttribute="trailing" secondItem="zR4-pf-5US" secondAttribute="trailing" id="UuL-Hu-9W8"/>
+                <constraint firstItem="F6P-ln-Y01" firstAttribute="leading" secondItem="WWo-pN-STB" secondAttribute="leading" id="V0D-eL-FOJ"/>
+                <constraint firstItem="WWo-pN-STB" firstAttribute="leading" secondItem="msU-tf-a53" secondAttribute="trailing" constant="23" id="ZVw-Hx-O5e"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="WWo-pN-STB">
+            <size key="intrinsicContentSize" width="75.5" height="20.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="account_arrow" width="24" height="25"/>
+        <image name="language_icon_black" width="20" height="20"/>
+    </resources>
+</document>

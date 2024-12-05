@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EnhanceSeverityHeaderView" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="ZQx-mM-FLs" id="i8z-HC-9hq"/>
+                <outlet property="stackView" destination="5Mx-oq-qPH" id="qWj-8e-6gp"/>
+                <outlet property="summeryLabel" destination="EGG-Xe-l0Y" id="HV6-Oe-SoY"/>
+                <outlet property="titleLabel" destination="yIE-5s-ktf" id="qv8-Dx-jzh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZQx-mM-FLs">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="19"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5Mx-oq-qPH">
+                    <rect key="frame" x="16" y="0.0" width="382" height="19"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIE-5s-ktf" customClass="CaptionSemiBoldPrimary" customModule="Openfield" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="191" height="19"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="alignment" value="left"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGG-Xe-l0Y" customClass="CaptionSemiBoldPrimary" customModule="Openfield" customModuleProvider="target">
+                            <rect key="frame" x="191" y="0.0" width="191" height="19"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="alignment" value="right"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="oqv-QJ-7yG"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5Mx-oq-qPH" secondAttribute="trailing" constant="16" id="BXy-Jz-DVs"/>
+                <constraint firstItem="5Mx-oq-qPH" firstAttribute="top" secondItem="ZQx-mM-FLs" secondAttribute="top" id="UtP-qZ-j5F"/>
+                <constraint firstAttribute="bottom" secondItem="5Mx-oq-qPH" secondAttribute="bottom" id="uFV-18-7LM"/>
+                <constraint firstItem="5Mx-oq-qPH" firstAttribute="leading" secondItem="ZQx-mM-FLs" secondAttribute="leading" constant="16" id="yrP-fQ-MWR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
+                    <real key="value" value="4"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="137.68115942028987" y="187.5"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="EGG-Xe-l0Y">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+        <designable name="yIE-5s-ktf">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+    </designables>
+</document>

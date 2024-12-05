@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="FieldCellShimmerView" rowHeight="111" id="KGk-i7-Jjw" customClass="FieldCellShimmerView" customModule="Openfield" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="464" height="111"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="464" height="111"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7rh-fF-JIC" customClass="AppShimmerView" customModule="Openfield" customModuleProvider="target">
+                        <rect key="frame" x="16" y="16" width="72" height="72"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="72" id="Ehv-QS-Bi9"/>
+                            <constraint firstAttribute="width" constant="72" id="esN-zk-bp3"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="viewBorderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="viewBorderColor">
+                                <color key="value" name="grey3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1X-4L-JyC" customClass="AppShimmerView" customModule="Openfield" customModuleProvider="target">
+                        <rect key="frame" x="389" y="16" width="61" height="18"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Ekl-6q-XfO"/>
+                            <constraint firstAttribute="width" constant="61" id="bke-A7-AJk"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="viewBorderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="viewBorderColor">
+                                <color key="value" name="grey3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zab-w1-cbj" customClass="AppShimmerView" customModule="Openfield" customModuleProvider="target">
+                        <rect key="frame" x="104" y="72" width="77" height="16"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="3aR-nU-dPb"/>
+                            <constraint firstAttribute="width" constant="77" id="D5k-Im-sJA"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="viewBorderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="viewBorderColor">
+                                <color key="value" name="grey3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNJ-wQ-urM" customClass="AppShimmerView" customModule="Openfield" customModuleProvider="target">
+                        <rect key="frame" x="104" y="51" width="200" height="16"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="cwc-NJ-26C"/>
+                            <constraint firstAttribute="width" constant="200" id="iac-V9-TtD"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="viewBorderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="viewBorderColor">
+                                <color key="value" name="grey3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6Z-xC-sMj" customClass="AppShimmerView" customModule="Openfield" customModuleProvider="target">
+                        <rect key="frame" x="104" y="16" width="134" height="18"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="134" id="I4n-L3-YZ7"/>
+                            <constraint firstAttribute="height" constant="18" id="UyG-FC-TRI"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="viewBorderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="viewBorderColor">
+                                <color key="value" name="grey3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="T1X-4L-JyC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="IIv-DA-mL0"/>
+                    <constraint firstItem="7rh-fF-JIC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Lyi-qP-ArS"/>
+                    <constraint firstItem="M6Z-xC-sMj" firstAttribute="leading" secondItem="7rh-fF-JIC" secondAttribute="trailing" constant="16" id="TFb-AJ-O77"/>
+                    <constraint firstItem="7rh-fF-JIC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="W6u-o1-m6G"/>
+                    <constraint firstItem="zab-w1-cbj" firstAttribute="top" secondItem="bNJ-wQ-urM" secondAttribute="bottom" constant="5" id="YCO-9f-28W"/>
+                    <constraint firstItem="zab-w1-cbj" firstAttribute="bottom" secondItem="7rh-fF-JIC" secondAttribute="bottom" id="bUo-4P-3zp"/>
+                    <constraint firstItem="M6Z-xC-sMj" firstAttribute="top" secondItem="7rh-fF-JIC" secondAttribute="top" id="dns-uc-OoO"/>
+                    <constraint firstItem="zab-w1-cbj" firstAttribute="leading" secondItem="7rh-fF-JIC" secondAttribute="trailing" constant="16" id="h0E-Fn-AEC"/>
+                    <constraint firstAttribute="trailing" secondItem="T1X-4L-JyC" secondAttribute="trailing" constant="14" id="j9d-X0-0ai"/>
+                    <constraint firstAttribute="bottom" secondItem="7rh-fF-JIC" secondAttribute="bottom" constant="19" id="kHw-Hc-wVQ"/>
+                    <constraint firstItem="bNJ-wQ-urM" firstAttribute="leading" secondItem="7rh-fF-JIC" secondAttribute="trailing" constant="16" id="y4V-sB-zC8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="shimerView1" destination="7rh-fF-JIC" id="P1b-Sp-Ec1"/>
+                <outlet property="shimerView2" destination="T1X-4L-JyC" id="6qM-lP-avy"/>
+                <outlet property="shimerView3" destination="zab-w1-cbj" id="kwX-J5-e1K"/>
+                <outlet property="shimerView4" destination="bNJ-wQ-urM" id="BI2-v6-ef7"/>
+                <outlet property="shimerView5" destination="M6Z-xC-sMj" id="sEF-nr-OJ2"/>
+            </connections>
+            <point key="canvasLocation" x="88.549618320610676" y="-37.676056338028168"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="grey3">
+            <color red="0.88599997758865356" green="0.88599997758865356" blue="0.91399997472763062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

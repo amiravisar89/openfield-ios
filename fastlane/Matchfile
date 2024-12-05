@@ -1,0 +1,5 @@
+git_url("git@bitbucket.org:prosperaag/valley-insights-ios-match.git")
+
+storage_mode("git")
+
+force_for_new_devices true # Checks if the device count has changed since the last time you ran match, and automatically re-generates the provisioning profile if necessary.

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Analysis View Controller-->
+        <scene sceneID="969-db-JFR">
+            <objects>
+                <viewController storyboardIdentifier="AnalysisViewController" id="wvJ-CD-TWy" customClass="AnalysisViewController" customModule="Openfield" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="Cqu-6V-9UA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nkF-wu-5kV" customClass="FieldImageView" customModule="Openfield" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="757"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlJ-rO-g6P" customClass="AnalysisTabs" customModule="Openfield" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="757" width="414" height="105"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="xlZ-E8-HlN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FuN-fl-xNK"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FuN-fl-xNK" firstAttribute="bottom" secondItem="NlJ-rO-g6P" secondAttribute="bottom" id="HqY-gb-DAZ"/>
+                            <constraint firstItem="FuN-fl-xNK" firstAttribute="trailing" secondItem="NlJ-rO-g6P" secondAttribute="trailing" id="M6J-HM-zgq"/>
+                            <constraint firstItem="NlJ-rO-g6P" firstAttribute="top" secondItem="nkF-wu-5kV" secondAttribute="bottom" id="PLM-yP-hcO"/>
+                            <constraint firstItem="nkF-wu-5kV" firstAttribute="leading" secondItem="FuN-fl-xNK" secondAttribute="leading" id="RK0-dS-cZW"/>
+                            <constraint firstItem="nkF-wu-5kV" firstAttribute="top" secondItem="Cqu-6V-9UA" secondAttribute="top" id="UbY-oU-1bj"/>
+                            <constraint firstItem="NlJ-rO-g6P" firstAttribute="leading" secondItem="FuN-fl-xNK" secondAttribute="leading" id="emu-Kt-OH6"/>
+                            <constraint firstItem="nkF-wu-5kV" firstAttribute="trailing" secondItem="FuN-fl-xNK" secondAttribute="trailing" id="la6-7l-Bat"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="analysisTabs" destination="NlJ-rO-g6P" id="wzR-Dh-7J4"/>
+                        <outlet property="anlysisTabHeightConstraint" destination="xlZ-E8-HlN" id="7cJ-7B-dYz"/>
+                        <outlet property="fieldImage" destination="nkF-wu-5kV" id="aMt-IY-qGB"/>
+                        <outlet property="viewBackground" destination="Cqu-6V-9UA" id="Y1s-3G-3cb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qL3-nC-bpA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160.86956521739131" y="161.38392857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

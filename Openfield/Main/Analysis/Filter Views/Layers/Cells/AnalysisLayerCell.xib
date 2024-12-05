@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnalysisLayerCell" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="cloudIcon" destination="LMZ-SB-7ok" id="EMb-pN-fZV"/>
+                <outlet property="contentView" destination="6CT-p2-vhi" id="d7L-PT-2YT"/>
+                <outlet property="layerPreview" destination="6S8-Dg-fU6" id="ZSK-JI-Ixq"/>
+                <outlet property="layerTitle" destination="drq-rD-a82" id="1Pm-vZ-TpD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="AnalysisLayerCell" insetsLayoutMarginsFromSafeArea="NO" id="6CT-p2-vhi">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLs-xu-aVw">
+                    <rect key="frame" x="0.0" y="16" width="100" height="83"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6S8-Dg-fU6">
+                            <rect key="frame" x="25" y="10" width="50" height="50"/>
+                            <accessibility key="accessibilityConfiguration" identifier="analysisLayerImage">
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="n1m-EF-kic"/>
+                                <constraint firstAttribute="width" constant="50" id="wcO-q5-qL3"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cor verdadeira" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="drq-rD-a82" customClass="BodyRegularPrimary" customModule="Openfield" customModuleProvider="target">
+                            <rect key="frame" x="9" y="68" width="82" height="15"/>
+                            <accessibility key="accessibilityConfiguration" identifier="analysisLayerText"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="alignment" value="center"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="LMZ-SB-7ok">
+                            <rect key="frame" x="74" y="0.0" width="21" height="10"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="21" id="FPP-5O-qtg"/>
+                                <constraint firstAttribute="height" constant="10" id="VMe-7n-w3e"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="LMZ-SB-7ok" firstAttribute="top" secondItem="gLs-xu-aVw" secondAttribute="top" id="Bal-6f-8TT"/>
+                        <constraint firstItem="6S8-Dg-fU6" firstAttribute="centerX" secondItem="gLs-xu-aVw" secondAttribute="centerX" id="HSf-OD-DQT"/>
+                        <constraint firstItem="drq-rD-a82" firstAttribute="top" secondItem="6S8-Dg-fU6" secondAttribute="bottom" constant="8" id="LWi-yc-SeU"/>
+                        <constraint firstAttribute="trailing" secondItem="drq-rD-a82" secondAttribute="trailing" constant="9" id="Tnm-Vn-pog"/>
+                        <constraint firstItem="6S8-Dg-fU6" firstAttribute="top" secondItem="gLs-xu-aVw" secondAttribute="top" constant="10" id="fHm-kA-Cge"/>
+                        <constraint firstAttribute="bottom" secondItem="drq-rD-a82" secondAttribute="bottom" id="pqE-lp-bvV"/>
+                        <constraint firstItem="drq-rD-a82" firstAttribute="leading" secondItem="gLs-xu-aVw" secondAttribute="leading" constant="9" id="qEh-iO-qEa"/>
+                        <constraint firstAttribute="trailing" secondItem="LMZ-SB-7ok" secondAttribute="trailing" constant="5" id="qHO-Mc-DxF"/>
+                        <constraint firstAttribute="width" constant="100" id="uy2-Ae-Rpf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gLs-xu-aVw" secondAttribute="trailing" id="ICV-N4-0wv"/>
+                <constraint firstAttribute="bottom" secondItem="gLs-xu-aVw" secondAttribute="bottom" constant="16" id="WcK-wT-XmD"/>
+                <constraint firstItem="gLs-xu-aVw" firstAttribute="top" secondItem="6CT-p2-vhi" secondAttribute="top" constant="16" id="bfg-Sr-Oko"/>
+                <constraint firstItem="gLs-xu-aVw" firstAttribute="leading" secondItem="6CT-p2-vhi" secondAttribute="leading" id="cd5-H3-hOo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="410.14492753623193" y="25.111607142857142"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="drq-rD-a82">
+            <size key="intrinsicContentSize" width="110.5" height="20"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="cloud" width="20.5" height="13"/>
+    </resources>
+</document>

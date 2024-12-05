@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fields List View Controller-->
+        <scene sceneID="0lQ-SL-OwX">
+            <objects>
+                <viewController storyboardIdentifier="FieldsListViewController" id="ZWG-PC-uid" customClass="FieldsListViewController" customModule="Openfield" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ILC-da-fKy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0pg-Br-yYf">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W22-O7-YfM">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="814"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTa-NL-OnS" customClass="BodyRegularPrimary" customModule="Openfield" customModuleProvider="target">
+                                <rect key="frame" x="186.5" y="208" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upC-Br-gTa">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CMe-Ql-oW1">
+                                        <rect key="frame" x="182" y="381" width="50" height="52.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAW-nV-I16" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="l8Y-tD-xfb"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="circleStrokeSpin"/>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                        <color key="value" systemColor="systemGreenColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNL-Zv-sXT" customClass="BodyRegular" customModule="Openfield" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="32" width="50" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="CMe-Ql-oW1" firstAttribute="centerX" secondItem="upC-Br-gTa" secondAttribute="centerX" id="eVj-OC-HkD"/>
+                                    <constraint firstItem="CMe-Ql-oW1" firstAttribute="centerY" secondItem="upC-Br-gTa" secondAttribute="centerY" id="xQD-OB-JFq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O7t-bt-QfF"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0pg-Br-yYf" firstAttribute="top" secondItem="O7t-bt-QfF" secondAttribute="top" id="1ha-Qu-0JC"/>
+                            <constraint firstItem="ZTa-NL-OnS" firstAttribute="centerX" secondItem="O7t-bt-QfF" secondAttribute="centerX" id="4Wl-qv-eck"/>
+                            <constraint firstItem="O7t-bt-QfF" firstAttribute="trailing" secondItem="upC-Br-gTa" secondAttribute="trailing" id="AHa-JC-T9m"/>
+                            <constraint firstItem="0pg-Br-yYf" firstAttribute="leading" secondItem="O7t-bt-QfF" secondAttribute="leading" id="MTI-Yf-gkb"/>
+                            <constraint firstItem="0pg-Br-yYf" firstAttribute="trailing" secondItem="O7t-bt-QfF" secondAttribute="trailing" id="NT2-dG-pyI"/>
+                            <constraint firstItem="upC-Br-gTa" firstAttribute="bottom" secondItem="O7t-bt-QfF" secondAttribute="bottom" id="RIJ-bY-uai"/>
+                            <constraint firstItem="ZTa-NL-OnS" firstAttribute="top" secondItem="O7t-bt-QfF" secondAttribute="top" constant="160" id="SWI-jU-FiA"/>
+                            <constraint firstItem="upC-Br-gTa" firstAttribute="top" secondItem="O7t-bt-QfF" secondAttribute="top" id="cZS-mw-oRc"/>
+                            <constraint firstItem="0pg-Br-yYf" firstAttribute="bottom" secondItem="O7t-bt-QfF" secondAttribute="bottom" id="rk6-GB-fCg"/>
+                            <constraint firstItem="upC-Br-gTa" firstAttribute="leading" secondItem="O7t-bt-QfF" secondAttribute="leading" id="zpH-iA-DBG"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="emptyStateLabel" destination="ZTa-NL-OnS" id="f27-Kw-Q16"/>
+                        <outlet property="fieldsTable" destination="W22-O7-YfM" id="mC6-Yl-yg9"/>
+                        <outlet property="loader" destination="nAW-nV-I16" id="PfY-32-7n7"/>
+                        <outlet property="loadingContainer" destination="upC-Br-gTa" id="j4f-pX-tGG"/>
+                        <outlet property="loadingLabel" destination="uNL-Zv-sXT" id="Y3t-HG-Hrh"/>
+                        <outlet property="mainStackView" destination="0pg-Br-yYf" id="Owg-C9-cpE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Okv-3T-gmo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="98.4375"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="ZTa-NL-OnS">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+        <designable name="uNL-Zv-sXT">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

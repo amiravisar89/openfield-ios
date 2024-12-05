@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YourAccountCell" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="accountLabel" destination="3gI-cj-jhS" id="qQ9-5Q-oHG"/>
+                <outlet property="availbleLabel" destination="Q4c-Zw-PHA" id="oAR-7Y-gRP"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="W20-OX-GQR"/>
+                <outlet property="infoImage" destination="so7-q4-AWA" id="wTL-NG-j53"/>
+                <outlet property="manageTeamLabel" destination="vLT-jK-9Ui" id="LSa-g3-96F"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="ValleyTeamCell" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="99"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="team" translatesAutoresizingMaskIntoConstraints="NO" id="8ts-VY-sHg">
+                    <rect key="frame" x="0.0" y="15" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="gEf-5f-jEY"/>
+                        <constraint firstAttribute="height" constant="24" id="nau-rq-jwd"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gI-cj-jhS" customClass="BodyBoldPrimary" customModule="Openfield" customModuleProvider="target">
+                    <rect key="frame" x="44" y="17" width="41.5" height="20.5"/>
+                    <accessibility key="accessibilityConfiguration" identifier="ValleyTeamCellMainText"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="S0Q-Fi-jLb">
+                    <rect key="frame" x="476" y="14.5" width="24" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="6FZ-hT-edO"/>
+                        <constraint firstAttribute="height" constant="25" id="B5p-ra-Wzn"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage your team" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLT-jK-9Ui" customClass="CaptionRegularGrey" customModule="Openfield" customModuleProvider="target">
+                    <rect key="frame" x="44" y="41.5" width="142" height="20.5"/>
+                    <accessibility key="accessibilityConfiguration" identifier="ValleyTeamCellSecondText"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="alignment" value="left"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FJe-LP-4KV">
+                    <rect key="frame" x="44" y="69" width="56" height="17"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info_blue" translatesAutoresizingMaskIntoConstraints="NO" id="so7-q4-AWA">
+                            <rect key="frame" x="0.0" y="0.0" width="9.5" height="17"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4c-Zw-PHA" customClass="CaptionRegularValley" customModule="Openfield" customModuleProvider="target">
+                            <rect key="frame" x="14.5" y="0.0" width="41.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="S0Q-Fi-jLb" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="2fO-PR-Zci"/>
+                <constraint firstItem="8ts-VY-sHg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="4Aj-kv-c4H"/>
+                <constraint firstItem="FJe-LP-4KV" firstAttribute="top" secondItem="vLT-jK-9Ui" secondAttribute="bottom" constant="7" id="DOU-Wq-5al"/>
+                <constraint firstItem="8ts-VY-sHg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FbO-fY-px9"/>
+                <constraint firstItem="S0Q-Fi-jLb" firstAttribute="centerY" secondItem="8ts-VY-sHg" secondAttribute="centerY" id="Igi-z2-Frg"/>
+                <constraint firstItem="vLT-jK-9Ui" firstAttribute="top" secondItem="3gI-cj-jhS" secondAttribute="bottom" constant="4" id="QF9-Eq-Uu5"/>
+                <constraint firstItem="3gI-cj-jhS" firstAttribute="leading" secondItem="8ts-VY-sHg" secondAttribute="trailing" constant="20" id="Z5q-6Q-rCd"/>
+                <constraint firstItem="FJe-LP-4KV" firstAttribute="leading" secondItem="vLT-jK-9Ui" secondAttribute="leading" id="gJt-rc-iix"/>
+                <constraint firstItem="3gI-cj-jhS" firstAttribute="centerY" secondItem="8ts-VY-sHg" secondAttribute="centerY" id="nku-ut-p0q"/>
+                <constraint firstAttribute="bottom" secondItem="FJe-LP-4KV" secondAttribute="bottom" constant="13" id="u6P-Tz-rth"/>
+                <constraint firstItem="vLT-jK-9Ui" firstAttribute="leading" secondItem="3gI-cj-jhS" secondAttribute="leading" id="ztV-t4-aXp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="140.95982142857142"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="3gI-cj-jhS">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+        <designable name="Q4c-Zw-PHA">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+        <designable name="vLT-jK-9Ui">
+            <size key="intrinsicContentSize" width="142" height="20.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="account_arrow" width="24" height="25"/>
+        <image name="info_blue" width="9.5" height="9.5"/>
+        <image name="team" width="24" height="24"/>
+    </resources>
+</document>

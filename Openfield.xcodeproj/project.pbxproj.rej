@@ -1,0 +1,30 @@
+diff a/Openfield.xcodeproj/project.pbxproj b/Openfield.xcodeproj/project.pbxproj	(rejected hunks)
+@@ -13,6 +13,8 @@
+ 		0E1140BE2384940A00BCEAF0 /* Reactor+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1140BD2384940A00BCEAF0 /* Reactor+Injection.swift */; };
+ 		0E1140C02384981700BCEAF0 /* InjectedWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1140BF2384981700BCEAF0 /* InjectedWrapper.swift */; };
+ 		0E1140CA2385782600BCEAF0 /* RxMoyaAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1140C92385782600BCEAF0 /* RxMoyaAdapter.swift */; };
++		0EA93D2C239123BA003F9417 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA93D2B239123BA003F9417 /* FeedbackViewController.swift */; };
++		0EA93D2E239123F7003F9417 /* FeedbackViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA93D2D239123F7003F9417 /* FeedbackViewController.storyboard */; };
+ 		0EA9822A238AE26C00329215 /* Product-Sans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EA98228238AE26B00329215 /* Product-Sans-Bold.ttf */; };
+ 		0EA9822B238AE26C00329215 /* Product-Sans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EA98228238AE26B00329215 /* Product-Sans-Bold.ttf */; };
+ 		0EA9822C238AE26C00329215 /* Product-Sans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EA98229238AE26B00329215 /* Product-Sans-Regular.ttf */; };
+@@ -103,6 +105,8 @@
+ 		0E1140BD2384940A00BCEAF0 /* Reactor+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactor+Injection.swift"; sourceTree = "<group>"; };
+ 		0E1140BF2384981700BCEAF0 /* InjectedWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedWrapper.swift; sourceTree = "<group>"; };
+ 		0E1140C92385782600BCEAF0 /* RxMoyaAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxMoyaAdapter.swift; sourceTree = "<group>"; };
++		0EA93D2B239123BA003F9417 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
++		0EA93D2D239123F7003F9417 /* FeedbackViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedbackViewController.storyboard; sourceTree = "<group>"; };
+ 		0EA98228238AE26B00329215 /* Product-Sans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product-Sans-Bold.ttf"; sourceTree = "<group>"; };
+ 		0EA98229238AE26B00329215 /* Product-Sans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Product-Sans-Regular.ttf"; sourceTree = "<group>"; };
+ 		0EBD3C5E238D5299005E58A7 /* LabelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelBase.swift; sourceTree = "<group>"; };
+@@ -357,8 +370,8 @@
+ 				0ED03978238D851100E38E01 /* Localizable.strings */,
+ 			);
+ 			path = en.lproj;
+-   sourceTree = "<group>";
+-   };
++			sourceTree = "<group>";
++		};
+ 		0ED03981238DDD6600E38E01 /* DeleteThisFolder */ = {
+ 			isa = PBXGroup;
+ 			children = (

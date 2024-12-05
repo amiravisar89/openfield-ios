@@ -1,0 +1,221 @@
+
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+
+product_name = "Openfield"
+
+# Bundle Id's
+bundle_identifier_prod = "ag.prospera.vi"
+bundle_identifier_staging = "ag.prospera.vi-staging"
+bundle_identifier_qa = "ag.prospera.vi-qa"
+
+# Match Types
+dev_type = "development"
+appstore_type = "appstore"
+add_hoc_type = "adhoc"
+
+# Schemes
+staging_scheme = "Staging"
+prod_scheme = "Release"
+qa_scheme = "QA"
+
+# envs
+staging_env = "staging"
+prod_env = "prod"
+qa_env = "qa"
+
+# Paths
+xcodeproj_path = "Openfield.xcodeproj"
+xcworkspace_path = "Openfield.xcworkspace"
+devices_list_path = "./fastlane/devices.txt"
+app_store_connect_api_key_path = "/Users/ec2-user/Documents/certificates/prospera-x-ci-key.p8_9M8J9KNN43.json"
+
+simulator_base_path = "/Users/ec2-user/Documents/pipe-builds/"
+qa_simulator_zip_path = "#{simulator_base_path}QA-debug-iphonesimulator/Openfield.app.zip"
+qa_simulator_app_path = "#{simulator_base_path}QA-debug-iphonesimulator/Openfield.app"
+staging_simulator_zip_path = "#{simulator_base_path}Staging-debug-iphonesimulator/Openfield.app.zip"
+staging_simulator_app_path = "#{simulator_base_path}Staging-debug-iphonesimulator/Openfield.app"
+prod_simulator_zip_path = "#{simulator_base_path}Release-debug-iphonesimulator/Openfield.app.zip"
+prod_simulator_app_path = "#{simulator_base_path}Release-debug-iphonesimulator/Openfield.app"
+
+# Export Methods
+ad_hoc_export_method = "ad-hoc"
+appstore_export_method = "app-store"
+
+# Signings
+appstore_signing = "appstore"
+
+#Aws
+s3_region = 'us-east-1'
+s3_bucket_name = 'prospera-mobile-uploads'
+
+default_platform(:ios)
+
+platform :ios do
+
+  before_all do
+
+    # Match password for machine keychain
+    ENV['MATCH_PASSWORD']= "#{ENV['FASTLANE_MATCH_PASSWORD']}"
+    check_xcode
+  end
+
+  lane :test_app do
+    run_tests(scheme: "OpenfieldTests")
+  end  
+
+  desc "check xcode version"
+  lane :check_xcode do
+    xcversion(version: "<= 16.0")
+  end
+  
+  desc "update provisioning profile and update to local machine using devices.txt"
+  lane :update_devices do
+    register_devices(devices_file: devices_list_path, api_key_path: app_store_connect_api_key_path)
+    match(type: add_hoc_type, app_identifier: bundle_identifier_qa, force_for_new_devices: true)
+    match(type: add_hoc_type, app_identifier: bundle_identifier_staging, force_for_new_devices: true)
+    match(type: dev_type, app_identifier: bundle_identifier_qa, force_for_new_devices: true)
+    match(type: dev_type, app_identifier: bundle_identifier_staging, force_for_new_devices: true)
+    match(type: dev_type, app_identifier: bundle_identifier_prod, force_for_new_devices: true)
+  end
+
+  desc "fetch remote provisions into local machine and store in keychain"
+  lane :update_developer_match do
+    match(type: dev_type, app_identifier: bundle_identifier_prod, readonly: true)
+    match(type: dev_type, app_identifier: bundle_identifier_staging, readonly: true)
+    match(type: dev_type, app_identifier: bundle_identifier_qa, readonly: true)
+  end
+
+  desc "[CAUTION!!!] create new provisioning profiles on Apple Developer,
+  sets them on remote and update local machine"
+  lane :renew_provisioning do
+    match(type: dev_type, app_identifier: bundle_identifier_prod)
+    match(type: appstore_type, app_identifier: bundle_identifier_prod)
+    match(type: add_hoc_type, app_identifier: bundle_identifier_staging)
+    match(type: dev_type, app_identifier: bundle_identifier_staging)
+    match(type: add_hoc_type, app_identifier: bundle_identifier_qa)
+    match(type: dev_type, app_identifier: bundle_identifier_qa)
+  end
+
+  lane :build_only do
+    match(type: dev_type, app_identifier: bundle_identifier_qa, readonly: true)
+    build_app(scheme: qa_scheme,
+              workspace: xcworkspace_path,
+              include_bitcode: false,
+              clean: true,
+              skip_archive: true)
+  end
+
+lane :deploy_testflight_prod do
+  match(type: appstore_type, app_identifier: bundle_identifier_prod, readonly: true)
+  sync_code_signing(type: appstore_signing, api_key_path: app_store_connect_api_key_path)
+  build_app(scheme: prod_scheme,
+            workspace: xcworkspace_path,
+            include_bitcode: false,
+            clean: true,
+            export_method: appstore_export_method)
+  upload_to_testflight(itc_provider: "#{ENV['APPLE_TEAM_ID']}",groups: ["qa"] )
+end
+
+lane :deploy_firebase_staging do
+  match(type: add_hoc_type,app_identifier: bundle_identifier_staging, readonly: true)
+  build_app(scheme: staging_scheme,
+            workspace: xcworkspace_path,
+            include_bitcode: false,
+            clean: true,
+            export_method: ad_hoc_export_method)
+  firebase_app_distribution(firebase_cli_token: "1//#{ENV['FIREBASE_CLI_TOKEN_DEV']}",
+                            app: "1:#{ENV['FIREBASE_APP_ID_STAGING']}:ios:#{ENV['FIREBASE_APP_TOKEN_STAGING']}",
+                            groups: "developers,qa")
+end
+
+lane :deploy_firebase_qa do
+  match(type: add_hoc_type,app_identifier: bundle_identifier_qa, readonly: true)
+  build_app(scheme: qa_scheme,
+            workspace: xcworkspace_path,
+            include_bitcode: false,
+            clean: true,
+            export_method: ad_hoc_export_method)
+  firebase_app_distribution(firebase_cli_token: "1//#{ENV['FIREBASE_CLI_TOKEN_DEV']}",
+                            app: "1:#{ENV['FIREBASE_APP_ID_QA']}:ios:#{ENV['FIREBASE_APP_TOKEN_QA']}",
+                            groups: "Developers,QA,Product,Designers",
+                            release_notes: "Performance inhencment, App startup refactor, Bug fixes")
+end
+
+lane :deploy_aws_staging do
+  xcbuild(
+      workspace: xcworkspace_path,
+      scheme: staging_scheme,
+      xcargs: "-sdk iphonesimulator SYMROOT='#{simulator_base_path}'")
+  zip(
+    path: staging_simulator_app_path,
+    output_path: staging_simulator_zip_path)
+
+  upload_to_s3(
+    file_path: "#{staging_simulator_zip_path}",
+    env: staging_env)
+
+  sh "rm -rf #{simulator_base_path}"
+end
+
+lane :deploy_aws_qa do
+  xcbuild(
+      workspace: xcworkspace_path,
+      scheme: qa_scheme,
+      xcargs: "-sdk iphonesimulator SYMROOT='#{simulator_base_path}'")
+  zip(
+    path: qa_simulator_app_path,
+    output_path: qa_simulator_zip_path)
+
+  upload_to_s3(
+    file_path: "#{qa_simulator_zip_path}",
+    env: qa_env)
+
+  sh "rm -rf #{simulator_base_path}"
+end
+
+lane :deploy_aws_prod do
+  xcbuild(
+      workspace: xcworkspace_path,
+      scheme: prod_scheme,
+      xcargs: "-sdk iphonesimulator SYMROOT='#{simulator_base_path}'")
+  zip(
+    path: prod_simulator_app_path,
+    output_path: prod_simulator_zip_path)
+
+  upload_to_s3(
+    file_path: "#{prod_simulator_zip_path}",
+    env: prod_env)
+
+  sh "rm -rf #{simulator_base_path}"
+end
+
+  lane :upload_to_s3 do |options|
+
+    file_path = options[:file_path]
+    env = options[:env]
+  
+    s3_folder_name = "ios/#{env}"
+  
+    s3_client = Aws::S3::Client.new(
+      access_key_id: "#{ENV['S3_ACCESS_KEY']}",
+      secret_access_key: "#{ENV['S3_SECRET_KEY']}",  
+      region: s3_region
+    )
+  
+    version = get_version_number(
+      xcodeproj: xcodeproj_path)
+    build_number = get_build_number(xcodeproj: xcodeproj_path)
+  
+     version_number = "#{version}.#{build_number}"
+  
+     s3_client.put_object(
+      bucket: s3_bucket_name,
+      key: "#{s3_folder_name}/Openfield-#{version_number}-#{env}.app.zip",
+      body: File.read(file_path)
+    )
+  
+    UI.success("File #{File.basename(file_path)} uploaded to S3 folder #{s3_folder_name}")
+  end
+
+end

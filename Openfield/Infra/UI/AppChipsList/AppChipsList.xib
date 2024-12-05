@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppChipsList" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="chipList" destination="Eza-h2-82u" id="Z1c-pZ-vEg"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="HAN-RN-4Hx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="338"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="etD-OV-TAB">
+                    <rect key="frame" x="0.0" y="0.0" width="388" height="338"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Eza-h2-82u" customClass="TagListView" customModule="TagListView">
+                            <rect key="frame" x="0.0" y="0.0" width="388" height="338"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration" identifier="FeedbackAnswerTags">
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="multiselect" value="NO"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="etD-OV-TAB" secondAttribute="trailing" id="Eyq-O4-dzk"/>
+                <constraint firstItem="etD-OV-TAB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="W9n-QT-Ujh"/>
+                <constraint firstItem="etD-OV-TAB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dBe-Pl-nxt"/>
+                <constraint firstAttribute="bottom" secondItem="etD-OV-TAB" secondAttribute="bottom" id="wqx-kB-lv6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-116.03053435114504" y="-160.56338028169014"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="Eza-h2-82u">
+            <size key="intrinsicContentSize" width="388" height="16"/>
+        </designable>
+    </designables>
+</document>

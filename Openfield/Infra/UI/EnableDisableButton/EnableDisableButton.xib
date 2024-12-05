@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DoneButton" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="EnableDisableButtonView" destination="iN0-l3-epB" id="dBP-Nw-DUw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DoneButton" customModule="Openfield" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3a-bQ-qRT">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="d3a-bQ-qRT" secondAttribute="bottom" id="98o-5T-6PB"/>
+                <constraint firstItem="d3a-bQ-qRT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Q2u-mI-AUS"/>
+                <constraint firstItem="d3a-bQ-qRT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iGb-vv-TOH"/>
+                <constraint firstAttribute="trailing" secondItem="d3a-bQ-qRT" secondAttribute="trailing" id="lNY-d8-RCd"/>
+            </constraints>
+            <connections>
+                <outlet property="button" destination="d3a-bQ-qRT" id="51E-UN-2BV"/>
+            </connections>
+            <point key="canvasLocation" x="117" y="-32"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

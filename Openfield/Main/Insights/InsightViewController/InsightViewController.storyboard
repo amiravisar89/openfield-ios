@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Insight View Controller-->
+        <scene sceneID="aWv-85-YcW">
+            <objects>
+                <viewController storyboardIdentifier="InsightViewController" hidesBottomBarWhenPushed="YES" id="vC3-fv-QH0" customClass="InsightViewController" customModule="Openfield" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uxl-Ye-Oyg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNk-Vh-Tho" customClass="FieldImageView" customModule="Openfield" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="548"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yG9-sY-8aG" userLabel="EndViewMarker">
+                                <rect key="frame" x="16" y="738" width="382" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Ulj-ka-5O0"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PtH-0o-TtW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xln-Uq-EEn" customClass="Button2" customModule="Openfield" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="54" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="InsightBackButton">
+                                    <accessibilityTraits key="traits" image="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="7qs-15-8w0"/>
+                                    <constraint firstAttribute="height" constant="50" id="yKP-JP-kz8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="defaultImage" value="BackArrowBlack"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="highlightedImage" value="BackArrowBlack"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lS0-AM-LzS">
+                                <rect key="frame" x="0.0" y="103" width="414" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Ho2-pa-52r"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xAL-Pr-T6c"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xAL-Pr-T6c" firstAttribute="bottom" secondItem="NNk-Vh-Tho" secondAttribute="bottom" constant="270" id="4cL-Sq-aFL"/>
+                            <constraint firstItem="PtH-0o-TtW" firstAttribute="bottom" secondItem="Xln-Uq-EEn" secondAttribute="bottom" id="GFL-xS-Pwd"/>
+                            <constraint firstItem="PtH-0o-TtW" firstAttribute="trailing" secondItem="xAL-Pr-T6c" secondAttribute="trailing" id="O8g-9v-Ma4"/>
+                            <constraint firstItem="NNk-Vh-Tho" firstAttribute="top" secondItem="xAL-Pr-T6c" secondAttribute="top" id="OvO-4l-2F2"/>
+                            <constraint firstAttribute="trailing" secondItem="lS0-AM-LzS" secondAttribute="trailing" id="VGX-Jk-0n0"/>
+                            <constraint firstItem="PtH-0o-TtW" firstAttribute="top" secondItem="Uxl-Ye-Oyg" secondAttribute="top" id="ajM-vE-cVA"/>
+                            <constraint firstItem="yG9-sY-8aG" firstAttribute="leading" secondItem="Uxl-Ye-Oyg" secondAttribute="leading" constant="16" id="bm4-58-c4F"/>
+                            <constraint firstItem="lS0-AM-LzS" firstAttribute="bottom" secondItem="Xln-Uq-EEn" secondAttribute="bottom" id="cfj-M6-B26"/>
+                            <constraint firstItem="xAL-Pr-T6c" firstAttribute="trailing" secondItem="NNk-Vh-Tho" secondAttribute="trailing" id="e7z-hY-eLq"/>
+                            <constraint firstItem="lS0-AM-LzS" firstAttribute="leading" secondItem="Uxl-Ye-Oyg" secondAttribute="leading" id="evQ-Q0-dPf"/>
+                            <constraint firstItem="NNk-Vh-Tho" firstAttribute="leading" secondItem="xAL-Pr-T6c" secondAttribute="leading" id="gBL-LB-McT"/>
+                            <constraint firstItem="Xln-Uq-EEn" firstAttribute="top" secondItem="xAL-Pr-T6c" secondAttribute="top" constant="10" id="lew-Jt-jtH"/>
+                            <constraint firstAttribute="trailing" secondItem="yG9-sY-8aG" secondAttribute="trailing" constant="16" id="pF7-aQ-5JA"/>
+                            <constraint firstItem="PtH-0o-TtW" firstAttribute="leading" secondItem="xAL-Pr-T6c" secondAttribute="leading" id="qQq-yO-mS7"/>
+                            <constraint firstItem="xAL-Pr-T6c" firstAttribute="bottom" secondItem="yG9-sY-8aG" secondAttribute="bottom" constant="123" id="wI7-LR-9PA"/>
+                            <constraint firstItem="Xln-Uq-EEn" firstAttribute="leading" secondItem="xAL-Pr-T6c" secondAttribute="leading" id="zLP-yi-mmb"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="backButton" destination="Xln-Uq-EEn" id="vmn-bF-9RN"/>
+                        <outlet property="backButtonHeaderBackground" destination="PtH-0o-TtW" id="WiK-zf-wCI"/>
+                        <outlet property="backButtonHeaderBottomLine" destination="lS0-AM-LzS" id="rGq-gt-6zR"/>
+                        <outlet property="endViewMarker" destination="yG9-sY-8aG" id="CBn-Le-zQi"/>
+                        <outlet property="fieldImage" destination="NNk-Vh-Tho" id="j2T-h8-ub2"/>
+                        <outlet property="fieldImageBottom" destination="4cL-Sq-aFL" id="suh-jp-vJF"/>
+                        <outlet property="viewBackground" destination="Uxl-Ye-Oyg" id="rtZ-a1-0OL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6C8-wv-8EU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XcF-Oj-oqt"/>
+            </objects>
+            <point key="canvasLocation" x="-279.71014492753625" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackArrowBlack" width="24" height="24"/>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

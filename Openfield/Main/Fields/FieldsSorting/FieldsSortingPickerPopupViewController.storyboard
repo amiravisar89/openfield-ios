@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta-Semibold.ttf">
+            <string>Averta-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Fields Sorting Picker Popup View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="FieldsSortingPickerPopupViewController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="FieldsSortingPickerPopupViewController" customModule="Openfield" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HgK-zF-zno">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdV-9j-hCI" customClass="Title3BoldPrimary" customModule="Openfield" customModuleProvider="target">
+                                        <rect key="frame" x="32" y="32" width="350" height="18"/>
+                                        <fontDescription key="fontDescription" name="Averta-Semibold" family="Averta-Semibold" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="alignment" value="left"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeu-pi-0y8">
+                                        <rect key="frame" x="32" y="82" width="350" height="616"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIY-Vi-MhX" customClass="DoneButton" customModule="Openfield" customModuleProvider="target">
+                                        <rect key="frame" x="32" y="730" width="350" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="eiJ-eb-uiO"/>
+                                        </constraints>
+                                        <color key="tintColor" name="white"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                            <fontDescription key="titleFontDescription" name="Averta-Semibold" family="Averta-Semibold" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="jIY-Vi-MhX" firstAttribute="top" secondItem="zeu-pi-0y8" secondAttribute="bottom" constant="32" id="2y3-ht-xb8"/>
+                                    <constraint firstAttribute="trailing" secondItem="UdV-9j-hCI" secondAttribute="trailing" constant="32" id="6LK-K8-Mjk"/>
+                                    <constraint firstAttribute="trailing" secondItem="zeu-pi-0y8" secondAttribute="trailing" constant="32" id="BHN-d5-ZaZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="jIY-Vi-MhX" secondAttribute="bottom" constant="32" id="RYR-FH-OAb"/>
+                                    <constraint firstItem="zeu-pi-0y8" firstAttribute="top" secondItem="UdV-9j-hCI" secondAttribute="bottom" constant="32" id="cFe-H6-0Xi"/>
+                                    <constraint firstAttribute="trailing" secondItem="jIY-Vi-MhX" secondAttribute="trailing" constant="32" id="cnI-cn-VDe"/>
+                                    <constraint firstItem="UdV-9j-hCI" firstAttribute="top" secondItem="HgK-zF-zno" secondAttribute="top" constant="32" id="gcR-YC-HsE"/>
+                                    <constraint firstItem="zeu-pi-0y8" firstAttribute="leading" secondItem="HgK-zF-zno" secondAttribute="leading" constant="32" id="jol-D9-gNX"/>
+                                    <constraint firstItem="jIY-Vi-MhX" firstAttribute="leading" secondItem="HgK-zF-zno" secondAttribute="leading" constant="32" id="jr2-Ds-gm4"/>
+                                    <constraint firstItem="UdV-9j-hCI" firstAttribute="leading" secondItem="HgK-zF-zno" secondAttribute="leading" constant="32" id="y3c-ts-v6G"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HgK-zF-zno" secondAttribute="trailing" id="0Au-Gc-j6M"/>
+                            <constraint firstItem="HgK-zF-zno" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Ppw-ee-i1U"/>
+                            <constraint firstItem="HgK-zF-zno" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="onH-YG-LrF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HgK-zF-zno" secondAttribute="bottom" id="x3Y-ZX-X3l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="doneBtn" destination="jIY-Vi-MhX" id="ZgW-Ic-iZn"/>
+                        <outlet property="mainTitle" destination="UdV-9j-hCI" id="3vK-Wd-pW3"/>
+                        <outlet property="sortingsTable" destination="zeu-pi-0y8" id="sGe-Vm-eYv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="UdV-9j-hCI">
+            <size key="intrinsicContentSize" width="48" height="18"/>
+        </designable>
+        <designable name="jIY-Vi-MhX">
+            <size key="intrinsicContentSize" width="80.5" height="32"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

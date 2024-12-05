@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="DE7-qC-ezY">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="chj-om-MoU" customClass="SplashViewController" customModule="Openfield" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bW1-Ck-co4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="valley_powered_by_prospera" translatesAutoresizingMaskIntoConstraints="NO" id="hdS-fV-82C">
+                                <rect key="frame" x="126.5" y="414" width="161" height="82.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="valleyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="QAo-OZ-GDr">
+                                <rect key="frame" x="180" y="757" width="54" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="hiE-Zw-sJR"/>
+                                    <constraint firstAttribute="height" constant="45" id="kWB-RB-94A"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MCX-FZ-Hgv" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="192" y="526.5" width="30" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RNu-Sm-wha"/>
+                                    <constraint firstAttribute="width" constant="30" id="hPe-d5-h0r"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="circleStrokeSpin"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" name="white"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="y3v-eK-eMg"/>
+                        <color key="backgroundColor" red="0.0" green="0.12941176470588234" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="y3v-eK-eMg" firstAttribute="bottom" secondItem="QAo-OZ-GDr" secondAttribute="bottom" constant="60" id="1j2-ji-MJh"/>
+                            <constraint firstItem="hdS-fV-82C" firstAttribute="centerX" secondItem="y3v-eK-eMg" secondAttribute="centerX" id="5Z1-5e-B8x"/>
+                            <constraint firstItem="QAo-OZ-GDr" firstAttribute="centerX" secondItem="y3v-eK-eMg" secondAttribute="centerX" id="5f9-iu-EwL"/>
+                            <constraint firstItem="MCX-FZ-Hgv" firstAttribute="top" secondItem="hdS-fV-82C" secondAttribute="bottom" constant="30" id="Qbi-4j-gpo"/>
+                            <constraint firstItem="MCX-FZ-Hgv" firstAttribute="centerX" secondItem="bW1-Ck-co4" secondAttribute="centerX" id="gkw-Hh-bAf"/>
+                            <constraint firstItem="hdS-fV-82C" firstAttribute="centerY" secondItem="y3v-eK-eMg" secondAttribute="centerY" id="wqw-72-Rvz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loader" destination="MCX-FZ-Hgv" id="tqw-rT-EuV"/>
+                        <outlet property="viewBackground" destination="bW1-Ck-co4" id="Y9w-KD-aXu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y7i-Gd-CRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.434782608695656" y="150.66964285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="valleyLogo" width="54" height="45"/>
+        <image name="valley_powered_by_prospera" width="161" height="82.5"/>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

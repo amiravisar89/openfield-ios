@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Layer Guide View Controller-->
+        <scene sceneID="ygb-XZ-bAK">
+            <objects>
+                <viewController storyboardIdentifier="LayerGuideViewController" modalPresentationStyle="fullScreen" id="VTh-9q-6YV" customClass="LayerGuideViewController" customModule="Openfield" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5UU-c0-Y1c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VJG-67-gB4" customClass="FSPagerView" customModule="FSPagerView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="758"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHz-pk-fMM" customClass="FSPageControl" customModule="FSPagerView">
+                                        <rect key="frame" x="20" y="726" width="374" height="7"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="7" id="yny-28-0uu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="zHz-pk-fMM" secondAttribute="bottom" constant="25" id="HCz-Pw-i6M"/>
+                                    <constraint firstItem="zHz-pk-fMM" firstAttribute="leading" secondItem="VJG-67-gB4" secondAttribute="leading" constant="20" symbolic="YES" id="Hpm-00-Gjq"/>
+                                    <constraint firstAttribute="trailing" secondItem="zHz-pk-fMM" secondAttribute="trailing" constant="20" symbolic="YES" id="TaG-c2-EkN"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kww-qe-M2Y" customClass="Button3" customModule="Openfield" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="LayerGuideGotItButton">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="LUD-hm-puK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HYz-mR-Btc"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HYz-mR-Btc" firstAttribute="bottom" secondItem="kww-qe-M2Y" secondAttribute="bottom" id="AD0-SX-cq6"/>
+                            <constraint firstItem="VJG-67-gB4" firstAttribute="top" secondItem="HYz-mR-Btc" secondAttribute="top" id="ZT6-aw-Pc1"/>
+                            <constraint firstItem="VJG-67-gB4" firstAttribute="leading" secondItem="HYz-mR-Btc" secondAttribute="leading" id="Zjp-PI-54C"/>
+                            <constraint firstItem="HYz-mR-Btc" firstAttribute="trailing" secondItem="kww-qe-M2Y" secondAttribute="trailing" id="fC1-uH-11T"/>
+                            <constraint firstItem="kww-qe-M2Y" firstAttribute="leading" secondItem="HYz-mR-Btc" secondAttribute="leading" id="p0D-0v-OaS"/>
+                            <constraint firstItem="HYz-mR-Btc" firstAttribute="trailing" secondItem="VJG-67-gB4" secondAttribute="trailing" id="vz8-Qy-yeT"/>
+                            <constraint firstItem="kww-qe-M2Y" firstAttribute="top" secondItem="VJG-67-gB4" secondAttribute="bottom" id="xaa-je-DyQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="5UU-c0-Y1c" id="09B-1d-Gc2"/>
+                        <outlet property="gotItButton" destination="kww-qe-M2Y" id="fw8-LF-dT4"/>
+                        <outlet property="pageControl" destination="zHz-pk-fMM" id="D3A-NP-tU2"/>
+                        <outlet property="pagerView" destination="VJG-67-gB4" id="jHF-pK-K8d"/>
+                        <outlet property="viewBackground" destination="5UU-c0-Y1c" id="QFp-Rj-s5R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TSj-Ik-Q4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="77" y="111"/>
+        </scene>
+    </scenes>
+</document>

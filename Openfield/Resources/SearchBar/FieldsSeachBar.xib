@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FieldSearchBar" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="clearBtn" destination="V61-AR-tyP" id="cu6-pv-Lho"/>
+                <outlet property="clearIcon" destination="kRI-Ja-kUZ" id="egG-B4-6Dh"/>
+                <outlet property="seachImage" destination="lQL-Bs-1dI" id="unf-Np-ocJ"/>
+                <outlet property="searchTF" destination="72K-WO-nly" id="HEY-Ql-T5v"/>
+                <outlet property="view" destination="iN0-l3-epB" id="dO0-BP-HRy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="451" height="66"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wnb-KH-f67">
+                    <rect key="frame" x="5" y="5" width="441" height="56"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSo-sV-j77">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="56"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerSearchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lQL-Bs-1dI">
+                                    <rect key="frame" x="5" y="5" width="20" height="46"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="544-gC-2FE"/>
+                                <constraint firstAttribute="bottom" secondItem="lQL-Bs-1dI" secondAttribute="bottom" constant="5" id="EyX-3t-Bni"/>
+                                <constraint firstItem="lQL-Bs-1dI" firstAttribute="top" secondItem="QSo-sV-j77" secondAttribute="top" constant="5" id="S90-aI-q8c"/>
+                                <constraint firstItem="lQL-Bs-1dI" firstAttribute="leading" secondItem="QSo-sV-j77" secondAttribute="leading" constant="5" id="Sfy-pz-17J"/>
+                                <constraint firstAttribute="trailing" secondItem="lQL-Bs-1dI" secondAttribute="trailing" constant="5" id="gaj-ni-g8j"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="72K-WO-nly" customClass="TextFieldTitle2RegularWhite" customModule="Openfield" customModuleProvider="target">
+                            <rect key="frame" x="35" y="0.0" width="361" height="56"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V61-AR-tyP">
+                            <rect key="frame" x="401" y="0.0" width="40" height="56"/>
+                            <subviews>
+                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchCloseIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kRI-Ja-kUZ">
+                                    <rect key="frame" x="10" y="5" width="20" height="46"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="1bd-Z5-RX3"/>
+                                <constraint firstItem="kRI-Ja-kUZ" firstAttribute="leading" secondItem="V61-AR-tyP" secondAttribute="leading" constant="10" id="I5s-YV-A6N"/>
+                                <constraint firstItem="kRI-Ja-kUZ" firstAttribute="top" secondItem="V61-AR-tyP" secondAttribute="top" constant="5" id="S7I-fO-VOx"/>
+                                <constraint firstAttribute="bottom" secondItem="kRI-Ja-kUZ" secondAttribute="bottom" constant="5" id="ixA-0K-is1"/>
+                                <constraint firstAttribute="trailing" secondItem="kRI-Ja-kUZ" secondAttribute="trailing" constant="10" id="jfl-ZU-wP8"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="wnb-KH-f67" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="M3V-39-mw9"/>
+                <constraint firstAttribute="trailing" secondItem="wnb-KH-f67" secondAttribute="trailing" constant="5" id="bGi-rx-ZQD"/>
+                <constraint firstItem="wnb-KH-f67" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="nNe-I6-vL1"/>
+                <constraint firstAttribute="bottom" secondItem="wnb-KH-f67" secondAttribute="bottom" constant="5" id="rwG-77-OXv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-32.824427480916029" y="350"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="72K-WO-nly">
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="headerSearchIcon" width="24" height="24"/>
+        <image name="searchCloseIcon" width="30" height="30"/>
+    </resources>
+</document>

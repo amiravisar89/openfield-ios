@@ -1,0 +1,19 @@
+USE_MOCK = NO
+USE_ACCSESSABILITY = YES
+BASE_URL = https:/$()/api-staging.o.prospera.ag/api/3
+SMARTLOOK_API_KEY = 97b54899e9198cfc21f721c013a4089aceaf9298
+LOKALISE_PROJECT_ID = 2049114260fe6162d4e539.66021118
+LOKALISE_TOKEN = d6535b014f86d829a60f4f448b5266f804e1043a
+FEATURE_FLAG_MOBILE_SDK_KEY = mob-5a3b6c90-c94e-412d-b4b8-f726adcfca3a
+SCHEME = https
+HOSTS = growers-staging.o.prospera.ag,m.valleyinsights-staging.prospera.ag,m.vi-staging.prospera.ag,valleyinsights-staging.prospera.ag,vi-staging.prospera.ag,l.vi-staging.prospera.ag,links.vi-staging.prospera.ag
+SHARE_HOST = m.vi-staging.prospera.ag
+SUBSCRIPTION_URL = https:/$()/field-management.o.prospera.ag
+ACCOUNT_URL = https:/$()/onboardingprod-ui-staging.azurewebsites.net/
+IS_APP_ICON = AppIcon-staging
+PRODUCT_BUNDLE_IDENTIFIER = ag.prospera.vi-staging
+DATA_DOG_CLIENT_TOKEN = pub9ad3a3221ff299adcf98cd9e4d7febc9
+ENABLE_DATADOG = YES
+DATADOG_SERVICE = openfield-ios
+APP_DOMAIN = vi-staging.prospera.ag
+

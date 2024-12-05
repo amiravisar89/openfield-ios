@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta-Regular.ttf">
+            <string>Averta-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="ukQ-KE-WQb">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="jR3-Ww-Otq" customClass="WelcomeViewController" customModule="Openfield" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KIm-kz-rm8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="bky-de-GrT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGY-dl-tLp">
+                                <rect key="frame" x="340" y="57" width="65" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Amo-YM-nlb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="JBg-np-7wY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Averta-Regular" family="Averta" pointSize="12"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="EN" image="language_icon">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="viewBorderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="viewBorderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbB-Lk-UmL">
+                                <rect key="frame" x="0.0" y="646" width="414" height="250"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="JDE-qq-pyv">
+                                        <rect key="frame" x="24" y="24" width="366" height="196"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p1i-De-kRv">
+                                                <rect key="frame" x="0.0" y="0.0" width="366" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AVH-iG-pO3" userLabel="loginWithPhoneButton" customClass="Button8" customModule="Openfield" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="366" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="WelcomeLoginWithPhoneButton">
+                                                            <accessibilityTraits key="traits" button="YES"/>
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="rOd-dz-04G"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rjk-gs-Zcu" userLabel="subscriptionButton" customClass="Button9" customModule="Openfield" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="366" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="WelcomeLoginWithPhoneButton">
+                                                            <accessibilityTraits key="traits" button="YES"/>
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="zwH-rB-sHa"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="viewBorderColor">
+                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="j1H-IT-b8T" customClass="DenimTextViewRegular" customModule="Openfield" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="74" width="366" height="33"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="alignment" value="center"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dD4-rv-rFH">
+                                                <rect key="frame" x="0.0" y="131" width="366" height="1"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.44026800496688739" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="93m-Ey-Hgj"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bSa-rI-OT6">
+                                                <rect key="frame" x="0.0" y="156" width="366" height="40"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="valleyLogoBlack" translatesAutoresizingMaskIntoConstraints="NO" id="PII-mA-no3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="FDh-lP-hyL"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Alr-pw-14a" customClass="DenimSmallTextViewRegular" customModule="Openfield" customModuleProvider="target">
+                                                        <rect key="frame" x="56" y="0.0" width="310" height="40"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="JDE-qq-pyv" secondAttribute="bottom" constant="30" id="1Lq-xY-2Av"/>
+                                    <constraint firstItem="JDE-qq-pyv" firstAttribute="top" secondItem="XbB-Lk-UmL" secondAttribute="top" constant="24" id="GbN-uO-cIC"/>
+                                    <constraint firstAttribute="trailing" secondItem="JDE-qq-pyv" secondAttribute="trailing" constant="24" id="K0Y-Vl-3Zc"/>
+                                    <constraint firstItem="JDE-qq-pyv" firstAttribute="leading" secondItem="XbB-Lk-UmL" secondAttribute="leading" constant="24" id="S5v-iy-4ZT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="viewCornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="valley_powered_by_prospera_white" translatesAutoresizingMaskIntoConstraints="NO" id="VOB-cX-Cw5" colorLabel="IBBuiltInLabel-Blue">
+                                <rect key="frame" x="50" y="98" width="314" height="75"/>
+                                <accessibility key="accessibilityConfiguration" identifier="WelcomeValleyPoweredImage">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Vhk-ee-r9G"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Mf9-fJ-eiX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XbB-Lk-UmL" firstAttribute="leading" secondItem="Mf9-fJ-eiX" secondAttribute="leading" id="3Fh-9U-seY"/>
+                            <constraint firstItem="bky-de-GrT" firstAttribute="top" secondItem="KIm-kz-rm8" secondAttribute="top" id="3Jd-g7-ywe"/>
+                            <constraint firstItem="bky-de-GrT" firstAttribute="trailing" secondItem="Mf9-fJ-eiX" secondAttribute="trailing" id="Gsf-Sm-vTo"/>
+                            <constraint firstItem="VOB-cX-Cw5" firstAttribute="leading" secondItem="Mf9-fJ-eiX" secondAttribute="leading" constant="50" id="ImX-9G-vqk"/>
+                            <constraint firstItem="VOB-cX-Cw5" firstAttribute="top" secondItem="Mf9-fJ-eiX" secondAttribute="top" constant="50" id="R0Z-dp-hFH"/>
+                            <constraint firstAttribute="bottom" secondItem="XbB-Lk-UmL" secondAttribute="bottom" id="Vrx-Gx-cEf"/>
+                            <constraint firstItem="XbB-Lk-UmL" firstAttribute="trailing" secondItem="Mf9-fJ-eiX" secondAttribute="trailing" id="XWf-15-Re7"/>
+                            <constraint firstItem="Mf9-fJ-eiX" firstAttribute="trailing" secondItem="JGY-dl-tLp" secondAttribute="trailing" constant="9" id="gVX-eQ-0VL"/>
+                            <constraint firstItem="JGY-dl-tLp" firstAttribute="top" secondItem="Mf9-fJ-eiX" secondAttribute="top" constant="9" id="jSU-9M-M7X"/>
+                            <constraint firstItem="Mf9-fJ-eiX" firstAttribute="trailing" secondItem="VOB-cX-Cw5" secondAttribute="trailing" constant="50" id="kWV-zV-CyG"/>
+                            <constraint firstItem="bky-de-GrT" firstAttribute="leading" secondItem="Mf9-fJ-eiX" secondAttribute="leading" id="nsT-1G-SUU"/>
+                            <constraint firstAttribute="bottom" secondItem="bky-de-GrT" secondAttribute="bottom" id="rqI-5c-mBP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="companeyLabel" destination="Alr-pw-14a" id="kVT-Uc-mfO"/>
+                        <outlet property="languageBtn" destination="JGY-dl-tLp" id="IdQ-z3-sq7"/>
+                        <outlet property="loginWithPhoneButton" destination="AVH-iG-pO3" id="zl4-Gz-XLa"/>
+                        <outlet property="subscriptionButton" destination="Rjk-gs-Zcu" id="L03-E3-SeM"/>
+                        <outlet property="troubleLoginTextView" destination="j1H-IT-b8T" id="MTa-dZ-yCH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJz-l3-99e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-86.956521739130437" y="143.97321428571428"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="Alr-pw-14a">
+            <size key="intrinsicContentSize" width="0.0" height="33"/>
+        </designable>
+        <designable name="j1H-IT-b8T">
+            <size key="intrinsicContentSize" width="0.0" height="33"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="language_icon" width="16" height="16"/>
+        <image name="login_bg" width="375" height="667"/>
+        <image name="valleyLogoBlack" width="40" height="40"/>
+        <image name="valley_powered_by_prospera_white" width="161" height="82.5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

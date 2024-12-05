@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15705"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnalysisTabs" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomSeparator" destination="VdQ-ac-j3B" id="nih-iP-7bS"/>
+                <outlet property="bufferLeft" destination="Rer-tO-52E" id="6P4-Eb-pv3"/>
+                <outlet property="bufferRight" destination="WuJ-qj-m3h" id="JQz-kD-EbE"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Bce-4X-pVo"/>
+                <outlet property="dateButton" destination="Qvj-wL-A3L" id="wZv-E6-cuQ"/>
+                <outlet property="insightButton" destination="Etm-vz-VRc" id="ZzQ-cq-747"/>
+                <outlet property="layerButton" destination="DDO-6K-hCw" id="lHH-Sd-lbs"/>
+                <outlet property="topSeparator" destination="rPL-sb-S0f" id="pA6-K7-o1H"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="AnalysisTabs" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDO-6K-hCw" customClass="AnalysisTabItem" customModule="Openfield" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="124" height="105"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rer-tO-52E">
+                    <rect key="frame" x="124" y="0.0" width="1" height="105"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="Jnc-kG-8iF"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qvj-wL-A3L" customClass="AnalysisTabItem" customModule="Openfield" customModuleProvider="target">
+                    <rect key="frame" x="125" y="0.0" width="123.5" height="105"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuJ-qj-m3h">
+                    <rect key="frame" x="248.5" y="0.0" width="1" height="105"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="glu-fA-lqz"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Etm-vz-VRc" customClass="AnalysisTabItem" customModule="Openfield" customModuleProvider="target">
+                    <rect key="frame" x="249.5" y="0.0" width="124" height="105"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPL-sb-S0f" userLabel="Top Separator">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="UES-7u-JMm"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VdQ-ac-j3B" userLabel="Bottom Separator">
+                    <rect key="frame" x="0.0" y="104" width="375" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Lc3-BO-DTS"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Etm-vz-VRc" firstAttribute="leading" secondItem="WuJ-qj-m3h" secondAttribute="trailing" id="0uz-ZK-phh"/>
+                <constraint firstAttribute="trailing" secondItem="VdQ-ac-j3B" secondAttribute="trailing" id="3jR-7H-UQS"/>
+                <constraint firstItem="Qvj-wL-A3L" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5R3-Ou-2mQ"/>
+                <constraint firstItem="Qvj-wL-A3L" firstAttribute="leading" secondItem="Rer-tO-52E" secondAttribute="trailing" id="88f-rk-cn9"/>
+                <constraint firstItem="DDO-6K-hCw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CB0-tU-m6i"/>
+                <constraint firstItem="rPL-sb-S0f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="E0r-Zx-0gQ"/>
+                <constraint firstItem="WuJ-qj-m3h" firstAttribute="leading" secondItem="Qvj-wL-A3L" secondAttribute="trailing" id="EAq-ux-dTv"/>
+                <constraint firstItem="Etm-vz-VRc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HFA-7q-bmE"/>
+                <constraint firstAttribute="bottom" secondItem="DDO-6K-hCw" secondAttribute="bottom" id="Iw1-XD-z1L"/>
+                <constraint firstAttribute="bottom" secondItem="Etm-vz-VRc" secondAttribute="bottom" id="JEc-Ab-pth"/>
+                <constraint firstItem="DDO-6K-hCw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LUV-95-LvO"/>
+                <constraint firstItem="DDO-6K-hCw" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.33" id="Ly1-Hw-y1c"/>
+                <constraint firstItem="WuJ-qj-m3h" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NpO-X7-fnc"/>
+                <constraint firstItem="Qvj-wL-A3L" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.33" id="NuH-SQ-nXh"/>
+                <constraint firstItem="Rer-tO-52E" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="O0j-gY-Adc"/>
+                <constraint firstAttribute="bottom" secondItem="Rer-tO-52E" secondAttribute="bottom" id="ad8-WR-f4c"/>
+                <constraint firstItem="VdQ-ac-j3B" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bQM-jG-3pZ"/>
+                <constraint firstItem="rPL-sb-S0f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cNM-pa-FFO"/>
+                <constraint firstAttribute="bottom" secondItem="Qvj-wL-A3L" secondAttribute="bottom" id="lin-rw-gIz"/>
+                <constraint firstAttribute="bottom" secondItem="VdQ-ac-j3B" secondAttribute="bottom" id="pdC-Yq-AdV"/>
+                <constraint firstItem="Rer-tO-52E" firstAttribute="leading" secondItem="DDO-6K-hCw" secondAttribute="trailing" id="sdF-zn-0Oi"/>
+                <constraint firstItem="Etm-vz-VRc" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.33" id="t9C-Cj-GVZ"/>
+                <constraint firstAttribute="bottom" secondItem="WuJ-qj-m3h" secondAttribute="bottom" id="wbn-GX-dvf"/>
+                <constraint firstAttribute="trailing" secondItem="rPL-sb-S0f" secondAttribute="trailing" id="y9i-Ut-VcT"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="103.62318840579711" y="418.19196428571428"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,153 @@
+image: atlassian/default-image:4
+
+definitions:
+  steps:
+    - step: &Unitest
+        name: Unitest
+        runs-on: "macos"
+        script:
+          - bundle install
+          - bundle e pod install
+          - bundle e fastlane test_app
+
+    - step: &Build
+        name: Build
+        runs-on: "macos"
+        script:
+          - bundle install
+          - bundle e pod install
+          - bundle e fastlane build_only
+
+    - step: &Clean
+        name: Clean
+        runs-on: "macos"
+        script:
+          - rm -rf ~/Library/Developer/Xcode/DerivedData
+          - rm -rf ~/Library/Developer/Xcode/Archives
+
+    - step: &Deploy_QA
+        name: Deploy_QA
+        runs-on: "macos"
+        script:
+          - bundle install
+          - bundle e pod install
+          - bundle e fastlane deploy_firebase_qa
+
+    - step: &Deploy_Staging
+        name: Deploy_Staging
+        runs-on: "macos"
+        script:
+          - bundle install
+          - bundle e pod install
+          - bundle e fastlane deploy_firebase_staging
+
+    - step: &Deploy_Prod
+        name: Deploy_Prod
+        runs-on: "macos"
+        script:
+          - bundle install
+          - bundle e pod install
+          - bundle e fastlane deploy_testflight_prod
+
+    - step: &Upload_AWS_QA
+        name: Upload_AWS_QA
+        runs-on: "macos"
+        script:
+          - bundle install
+          - bundle e pod install
+          - bundle e fastlane deploy_aws_qa
+
+    - step: &Upload_AWS_PROD
+        name: Upload_AWS_PROD
+        runs-on: "macos"
+        script:
+          - bundle install
+          - bundle e pod install
+          - bundle e fastlane deploy_aws_prod
+
+    - step: &Upload_AWS_STAGING
+        name: Upload_AWS_STAGING
+        runs-on: "macos"
+        script:
+          - bundle install
+          - bundle e pod install
+          - bundle e fastlane deploy_aws_staging
+
+    - step: &Register_iOS_Devices
+        name: Register_iOS_Devices
+        runs-on: "macos"
+        script:
+          - bundle install
+          - bundle e fastlane update_devices
+
+    - step: &Deploying_to_testers
+        name: Register_iOS_Devices
+        runs-on: "macos"
+        script:
+          - bundle install
+          - bundle e pod install
+          - bundle e fastlane update_devices
+          - bundle e fastlane deploy_firebase_qa
+
+    - step: &QA_Sanity_tests
+        name: QA_Sanity_tests
+        script:
+          - pipe: atlassian/trigger-pipeline:5.3.0
+            variables:
+              BITBUCKET_ACCESS_TOKEN: "${ACCESS_TOKEN}"
+              REPOSITORY: "openfieldsautomationtests"
+              CUSTOM_PIPELINE_NAME: "Mobile_Sanity_Automation_tests"
+              ACCOUNT: "prosperaag"
+              REF_TYPE: "branch"
+              REF_NAME: "master"
+              PIPELINE_VARIABLES: >
+                [{
+                  "key": "deviceOs",
+                  "value": "ios"
+                },
+                {
+                  "key": "Emulator",
+                  "value": "AndroidStudioEmulator",
+                  "secured": false
+                },
+                {
+                  "key": "Suite",
+                  "value": "VISanityTests",
+                  "secured": false
+                },
+                {
+                  "key": "ENV",
+                  "value": "QA",
+                  "secured": false
+                }]
+              WAIT: "true"
+
+pipelines:
+  custom:
+    build_all:
+      - step: *Unitest
+      - step: *Build
+      - step: *Clean
+
+  pull-requests:
+    "**":
+      - step: *Unitest
+      - step: *Build
+      - step: *Clean
+
+  branches:
+    qa:
+      - step: *Unitest
+      - step: *Deploy_QA
+      - step: *Clean
+
+    dev:
+      - step: *Unitest
+      - step: *Register_iOS_Devices
+      - step: *Build
+      - step: *Clean
+
+    master:
+      - step: *Unitest
+      - step: *Deploy_Prod
+      - step: *Clean

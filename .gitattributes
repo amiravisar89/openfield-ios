@@ -1,0 +1,2 @@
+*.pbxproj merge=union
+*.strings utf16 diff=localizablestrings

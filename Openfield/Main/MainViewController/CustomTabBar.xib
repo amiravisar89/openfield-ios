@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTabBar" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="IBx-HY-6Pg"/>
+                <outlet property="tabItemFields" destination="2D0-7u-7Jz" id="c4C-3E-D2K"/>
+                <outlet property="tabItemInsights" destination="XG1-GM-pMW" id="Zim-SR-N3z"/>
+                <outlet property="topSeparator" destination="1JM-x5-S0w" id="waD-hw-z0E"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="717" height="202"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JM-x5-S0w" userLabel="Top Separator">
+                    <rect key="frame" x="20" y="0.0" width="677" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="8tj-aL-Fz8"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jg7-2d-ZhR">
+                    <rect key="frame" x="0.0" y="0.0" width="717" height="202"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2D0-7u-7Jz">
+                            <rect key="frame" x="0.0" y="0.0" width="354.5" height="202"/>
+                            <accessibility key="accessibilityConfiguration" identifier="TabBarMyFields"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                            <state key="normal" title="My Fields" image="tabFieldsUnselected">
+                                <color key="titleColor" systemColor="groupTableViewBackgroundColor"/>
+                            </state>
+                            <state key="selected" image="tabFieldsSelected">
+                                <color key="titleColor" systemColor="darkTextColor"/>
+                            </state>
+                            <state key="highlighted" image="tabFieldsSelected">
+                                <color key="titleColor" systemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="clickedFields:" destination="-1" eventType="touchUpInside" id="Xsr-Ub-dsh"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XG1-GM-pMW">
+                            <rect key="frame" x="362.5" y="0.0" width="354.5" height="202"/>
+                            <accessibility key="accessibilityConfiguration" identifier="TabBarInsights"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                            <state key="normal" title="Insights" image="tabInsightsUnselected"/>
+                            <state key="selected" image="tabInsightsSelected"/>
+                            <state key="highlighted" image="tabInsightsSelected"/>
+                            <connections>
+                                <action selector="clickedInsights:" destination="-1" eventType="touchUpInside" id="zHl-Mc-NuU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jg7-2d-ZhR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7mX-DA-bJW"/>
+                <constraint firstItem="jg7-2d-ZhR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FDh-9F-SMU"/>
+                <constraint firstAttribute="trailingMargin" secondItem="1JM-x5-S0w" secondAttribute="trailing" id="I0L-5W-aEp"/>
+                <constraint firstAttribute="trailing" secondItem="jg7-2d-ZhR" secondAttribute="trailing" id="VHV-hN-tmI"/>
+                <constraint firstAttribute="bottom" secondItem="jg7-2d-ZhR" secondAttribute="bottom" id="Wee-8C-1dQ"/>
+                <constraint firstItem="1JM-x5-S0w" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="yHd-Rb-7oa"/>
+                <constraint firstItem="1JM-x5-S0w" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="z6L-HO-JtP"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+            <point key="canvasLocation" x="570.28985507246387" y="225.66964285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tabFieldsSelected" width="19" height="18"/>
+        <image name="tabFieldsUnselected" width="24" height="24"/>
+        <image name="tabInsightsSelected" width="24" height="24"/>
+        <image name="tabInsightsUnselected" width="24" height="26"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

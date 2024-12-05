@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Basic Popup View Controller-->
+        <scene sceneID="9ts-zL-Gbk">
+            <objects>
+                <viewController storyboardIdentifier="BasicPopupViewController" id="DOg-VO-lmd" customClass="BasicPopupViewController" customModule="Openfield" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bV-QN-lmw">
+                        <rect key="frame" x="0.0" y="0.0" width="330" height="190"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vgg-g3-3Bs">
+                                <rect key="frame" x="12" y="30" width="306" height="148"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMk-07-kRa" customClass="Title3BoldPrimary" customModule="Openfield" customModuleProvider="target">
+                                        <rect key="frame" x="132.5" y="0.0" width="41.5" height="65.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="basic_pop_up_title"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ej-eG-QbY" customClass="BodyRegularSecondary" customModule="Openfield" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="73.5" width="286" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="basic_pop_up_subtitle"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2E5-mW-UwP">
+                                        <rect key="frame" x="0.0" y="104" width="306" height="44"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2K-wx-vAx" customClass="Button2" customModule="Openfield" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="147" height="44"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="basic_pop_up_no_btn"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="U4C-Fv-gPe"/>
+                                                    <constraint firstAttribute="width" constant="147" id="kpu-Gp-UAG"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="cancelClicked:" destination="DOg-VO-lmd" eventType="touchUpInside" id="Usf-8T-dff"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnN-oE-i2o" customClass="Button5" customModule="Openfield" customModuleProvider="target">
+                                                <rect key="frame" x="159" y="0.0" width="147" height="44"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="basic_pop_up_yes_btn"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="7hE-y0-nrW"/>
+                                                    <constraint firstAttribute="width" constant="147" id="e2P-MO-0rn"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="okClicked:" destination="DOg-VO-lmd" eventType="touchUpInside" id="mQl-yl-lgM"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="iMk-07-kRa" firstAttribute="centerX" secondItem="vgg-g3-3Bs" secondAttribute="centerX" id="3Y6-Tt-SJk"/>
+                                    <constraint firstAttribute="bottom" secondItem="2E5-mW-UwP" secondAttribute="bottom" id="79I-Ey-yE6"/>
+                                    <constraint firstItem="0ej-eG-QbY" firstAttribute="centerX" secondItem="vgg-g3-3Bs" secondAttribute="centerX" id="HF8-Aa-NS1"/>
+                                    <constraint firstItem="iMk-07-kRa" firstAttribute="top" secondItem="vgg-g3-3Bs" secondAttribute="top" id="JjU-NX-lcc"/>
+                                    <constraint firstItem="0ej-eG-QbY" firstAttribute="top" secondItem="iMk-07-kRa" secondAttribute="bottom" constant="8" id="MmI-BS-MRJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="0ej-eG-QbY" secondAttribute="trailing" constant="10" id="cfs-qu-p9b"/>
+                                    <constraint firstItem="2E5-mW-UwP" firstAttribute="centerX" secondItem="vgg-g3-3Bs" secondAttribute="centerX" id="qpp-ED-yrC"/>
+                                    <constraint firstItem="2E5-mW-UwP" firstAttribute="top" secondItem="0ej-eG-QbY" secondAttribute="bottom" constant="10" id="tHz-L7-4im"/>
+                                    <constraint firstItem="0ej-eG-QbY" firstAttribute="leading" secondItem="vgg-g3-3Bs" secondAttribute="leading" constant="10" id="uwG-rR-JMB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AQu-dQ-WKm"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vgg-g3-3Bs" firstAttribute="top" secondItem="8bV-QN-lmw" secondAttribute="top" constant="30" id="9bZ-xw-Bf5"/>
+                            <constraint firstAttribute="trailing" secondItem="vgg-g3-3Bs" secondAttribute="trailing" constant="12" id="Xck-Pc-Tl1"/>
+                            <constraint firstAttribute="bottom" secondItem="vgg-g3-3Bs" secondAttribute="bottom" constant="12" id="cw2-Y5-Gy5"/>
+                            <constraint firstItem="vgg-g3-3Bs" firstAttribute="leading" secondItem="8bV-QN-lmw" secondAttribute="leading" constant="12" id="wGM-YB-ybz"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="330" height="190"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="U2K-wx-vAx" id="8gL-nI-dk7"/>
+                        <outlet property="okButton" destination="dnN-oE-i2o" id="LIx-9k-Di1"/>
+                        <outlet property="subtitleLabel" destination="0ej-eG-QbY" id="uPP-h7-xmF"/>
+                        <outlet property="titleLabel" destination="iMk-07-kRa" id="WVz-Bz-tTL"/>
+                        <outlet property="viewBackground" destination="8bV-QN-lmw" id="cM9-zB-d8y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0kp-0d-I3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="0ej-eG-QbY">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+        <designable name="iMk-07-kRa">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+    </designables>
+</document>

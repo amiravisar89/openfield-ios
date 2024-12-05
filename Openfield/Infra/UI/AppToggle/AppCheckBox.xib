@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppCheckBox" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="woH-P8-m2s" id="9JG-KH-Thx"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Coh-wh-rpi"/>
+                <outlet property="vImage" destination="4Xk-Qz-4Ji" id="rDA-pD-kuD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="91" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woH-P8-m2s">
+                    <rect key="frame" x="0.0" y="0.0" width="91" height="82"/>
+                    <subviews>
+                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue-v" translatesAutoresizingMaskIntoConstraints="NO" id="4Xk-Qz-4Ji">
+                            <rect key="frame" x="0.0" y="0.0" width="91" height="82"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="4Xk-Qz-4Ji" secondAttribute="trailing" id="AAg-uD-QZ3"/>
+                        <constraint firstAttribute="bottom" secondItem="4Xk-Qz-4Ji" secondAttribute="bottom" id="CBx-9h-CCF"/>
+                        <constraint firstItem="4Xk-Qz-4Ji" firstAttribute="top" secondItem="woH-P8-m2s" secondAttribute="top" id="nSe-yf-4ze"/>
+                        <constraint firstItem="4Xk-Qz-4Ji" firstAttribute="leading" secondItem="woH-P8-m2s" secondAttribute="leading" id="tNc-69-I1o"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="woH-P8-m2s" secondAttribute="trailing" id="DXV-tX-qY4"/>
+                <constraint firstItem="woH-P8-m2s" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UYU-FI-Hit"/>
+                <constraint firstItem="woH-P8-m2s" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="iZr-Yp-dtD"/>
+                <constraint firstAttribute="bottom" secondItem="woH-P8-m2s" secondAttribute="bottom" id="ox9-Cp-Fox"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-96.376811594202906" y="425.89285714285711"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="blue-v" width="10" height="8"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

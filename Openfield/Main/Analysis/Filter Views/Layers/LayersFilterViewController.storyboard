@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Layer Filter View Controller-->
+        <scene sceneID="El1-rM-A1x">
+            <objects>
+                <viewController storyboardIdentifier="LayerFilterViewController" id="SeJ-Eo-zRZ" customClass="LayerFilterViewController" customModule="Openfield" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Yd-hp-jyX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="za7-tY-vvL" customClass="CollectionView" customModule="CollectionKit">
+                                <rect key="frame" x="0.0" y="44" width="414" height="142"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="bIV-Le-jmk"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7N-A8-2WY" customClass="Button2" customModule="Openfield" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="194" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="oZj-rf-Sly"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VOu-6s-6g5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a7N-A8-2WY" firstAttribute="trailing" secondItem="VOu-6s-6g5" secondAttribute="trailing" id="1gr-Tv-ZWr"/>
+                            <constraint firstItem="a7N-A8-2WY" firstAttribute="leading" secondItem="VOu-6s-6g5" secondAttribute="leading" id="5zw-lD-R8i"/>
+                            <constraint firstItem="za7-tY-vvL" firstAttribute="leading" secondItem="VOu-6s-6g5" secondAttribute="leading" id="PNt-6v-Aq6"/>
+                            <constraint firstItem="za7-tY-vvL" firstAttribute="top" secondItem="VOu-6s-6g5" secondAttribute="top" id="Zy8-Mn-Ytm"/>
+                            <constraint firstItem="za7-tY-vvL" firstAttribute="trailing" secondItem="VOu-6s-6g5" secondAttribute="trailing" id="noo-ut-41H"/>
+                            <constraint firstItem="a7N-A8-2WY" firstAttribute="top" secondItem="za7-tY-vvL" secondAttribute="bottom" id="qdv-vL-G6O"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeBtn" destination="a7N-A8-2WY" id="hNk-3G-EAK"/>
+                        <outlet property="layerCollection" destination="za7-tY-vvL" id="BEZ-OR-AUC"/>
+                        <outlet property="viewBackground" destination="7Yd-hp-jyX" id="Kql-np-ylb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sqR-OM-jY2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

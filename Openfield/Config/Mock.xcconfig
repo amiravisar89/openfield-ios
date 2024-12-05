@@ -1,0 +1,5 @@
+USE_MOCK=YES
+USE_ACCSESSABILITY = YES
+IS_APP_ICON = AppIcon-debug
+PRODUCT_BUNDLE_IDENTIFIER = ag.prospera.vi-qa
+APP_DOMAIN = vi-qa.prospera.ag

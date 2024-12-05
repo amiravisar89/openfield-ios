@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EnterCodeView" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="codeInfoLabel" destination="QPt-cn-eZc" id="Z5W-md-er6"/>
+                <outlet property="codeStackView" destination="N5y-f8-QpU" id="LDt-Jo-j9K"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Z9k-2Q-OCT"/>
+                <outlet property="didNotReceiveLabel" destination="2Yh-mk-3xr" id="q5D-0C-6de"/>
+                <outlet property="errorLabel" destination="Fc2-5k-IEX" id="wOd-fq-kMu"/>
+                <outlet property="fifthCodeNumberLabel" destination="csB-jU-KiB" id="aAF-Ml-4fe"/>
+                <outlet property="fifthCodeNumberView" destination="A5E-DZ-3oq" id="C1A-hz-IYi"/>
+                <outlet property="firstCodeNumberLabel" destination="TSD-cq-kvg" id="by8-X1-dE6"/>
+                <outlet property="firstCodeNumberView" destination="QrR-xK-xKT" id="uBc-5c-mRv"/>
+                <outlet property="forthCodeNumberLabel" destination="iFa-co-hsu" id="KFo-oA-WBh"/>
+                <outlet property="forthCodeNumberView" destination="xCN-XH-MGf" id="OG8-6q-nmq"/>
+                <outlet property="loadingIndicator" destination="o6o-6T-9DW" id="bZ8-ux-fkM"/>
+                <outlet property="loginButton" destination="Liz-bK-pEm" id="CrX-BZ-jbh"/>
+                <outlet property="resendCodeLabel" destination="T1W-iF-9If" id="oDj-Cz-pSk"/>
+                <outlet property="secondCodeNumberLabel" destination="HHk-rL-OxD" id="KMH-KV-0PN"/>
+                <outlet property="secondCodeNumberView" destination="VSb-3I-syh" id="lJQ-nq-vWz"/>
+                <outlet property="sixthCodeNumberLabel" destination="UkI-00-hNQ" id="5ck-81-85z"/>
+                <outlet property="sixthCodeNumberView" destination="EMF-dv-IfZ" id="HoB-L5-0KC"/>
+                <outlet property="thirdCodeNumberLabel" destination="IiA-Iq-LIS" id="AlP-N1-0D8"/>
+                <outlet property="thirdCodeNumberView" destination="3wf-Nc-tJX" id="ewb-kZ-aoZ"/>
+                <outlet property="title" destination="Giq-6A-qWl" id="eo3-df-TXG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="EnterCodeView" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Giq-6A-qWl" customClass="Title4BoldPrimary" customModule="Openfield" customModuleProvider="target">
+                    <rect key="frame" x="145" y="30" width="85.5" height="20.5"/>
+                    <accessibility key="accessibilityConfiguration" identifier="EnterCodeEnterLabel">
+                        <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                    </accessibility>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="N5y-f8-QpU">
+                    <rect key="frame" x="63.5" y="74.5" width="248" height="40"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QrR-xK-xKT">
+                            <rect key="frame" x="0.0" y="0.0" width="33" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSD-cq-kvg">
+                                    <rect key="frame" x="8.5" y="0.0" width="16" height="31.5"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="EnterCodeFirstNumberLabel">
+                                        <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration" identifier="EnterCodeFirstNumberView">
+                                <accessibilityTraits key="traits" button="YES"/>
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="33" id="2cE-uQ-Zqc"/>
+                                <constraint firstItem="TSD-cq-kvg" firstAttribute="centerX" secondItem="QrR-xK-xKT" secondAttribute="centerX" id="mxw-xi-2lG"/>
+                                <constraint firstItem="TSD-cq-kvg" firstAttribute="top" secondItem="QrR-xK-xKT" secondAttribute="top" id="voY-Nk-Liu"/>
+                                <constraint firstAttribute="height" constant="40" id="y8O-Nd-eL1"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSb-3I-syh">
+                            <rect key="frame" x="43" y="0.0" width="33" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHk-rL-OxD">
+                                    <rect key="frame" x="8" y="0.0" width="17" height="32.5"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="EnterCodeSecondNUmberLabel">
+                                        <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration" identifier="EnterCodeSecondNumberView">
+                                <accessibilityTraits key="traits" button="YES"/>
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="33" id="4TZ-LT-ufp"/>
+                                <constraint firstItem="HHk-rL-OxD" firstAttribute="top" secondItem="VSb-3I-syh" secondAttribute="top" id="I4N-Co-Jwr"/>
+                                <constraint firstItem="HHk-rL-OxD" firstAttribute="centerX" secondItem="VSb-3I-syh" secondAttribute="centerX" id="vCU-Sk-eGP"/>
+                                <constraint firstAttribute="height" constant="40" id="zGC-pm-cfC"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3wf-Nc-tJX">
+                            <rect key="frame" x="86" y="0.0" width="33" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiA-Iq-LIS">
+                                    <rect key="frame" x="9.5" y="0.0" width="14.5" height="31.5"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="EnterCodeThirdNumberLabel"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration" identifier="EnterCodeThirdNumberView">
+                                <accessibilityTraits key="traits" button="YES"/>
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
+                            <constraints>
+                                <constraint firstItem="IiA-Iq-LIS" firstAttribute="top" secondItem="3wf-Nc-tJX" secondAttribute="top" id="GZO-T5-nhh"/>
+                                <constraint firstAttribute="width" constant="33" id="Zmz-tc-I0P"/>
+                                <constraint firstAttribute="height" constant="40" id="w41-p3-N2b"/>
+                                <constraint firstItem="IiA-Iq-LIS" firstAttribute="centerX" secondItem="3wf-Nc-tJX" secondAttribute="centerX" id="xVo-1q-YSG"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xCN-XH-MGf">
+                            <rect key="frame" x="129" y="0.0" width="33" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFa-co-hsu">
+                                    <rect key="frame" x="8" y="0.0" width="17" height="32.5"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="EnterCodeFOrthNumberLabel">
+                                        <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration" identifier="EnterCodeForthNumberVIew">
+                                <accessibilityTraits key="traits" button="YES"/>
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
+                            <constraints>
+                                <constraint firstItem="iFa-co-hsu" firstAttribute="centerX" secondItem="xCN-XH-MGf" secondAttribute="centerX" id="9aL-ML-KEo"/>
+                                <constraint firstItem="iFa-co-hsu" firstAttribute="top" secondItem="xCN-XH-MGf" secondAttribute="top" id="ET1-Fd-UJb"/>
+                                <constraint firstAttribute="height" constant="40" id="iuE-Zi-ELc"/>
+                                <constraint firstAttribute="width" constant="33" id="wtY-j6-uc6"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5E-DZ-3oq">
+                            <rect key="frame" x="172" y="0.0" width="33" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csB-jU-KiB">
+                                    <rect key="frame" x="8" y="0.0" width="17" height="32.5"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="EnterCodeFifthNumberLabel">
+                                        <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration" identifier="EnterCodeFifthNumberView">
+                                <accessibilityTraits key="traits" button="YES"/>
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
+                            <constraints>
+                                <constraint firstItem="csB-jU-KiB" firstAttribute="top" secondItem="A5E-DZ-3oq" secondAttribute="top" id="4ak-PZ-Rsq"/>
+                                <constraint firstAttribute="height" constant="40" id="EHK-hu-oUF"/>
+                                <constraint firstAttribute="width" constant="33" id="UVZ-Rn-XZh"/>
+                                <constraint firstItem="csB-jU-KiB" firstAttribute="centerX" secondItem="A5E-DZ-3oq" secondAttribute="centerX" id="jkG-SX-N5J"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMF-dv-IfZ">
+                            <rect key="frame" x="215" y="0.0" width="33" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkI-00-hNQ">
+                                    <rect key="frame" x="8" y="0.0" width="17" height="32.5"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="EnterCodeSixthNumberLabel">
+                                        <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration" identifier="EnterCodeSixthNumberView">
+                                <accessibilityTraits key="traits" button="YES"/>
+                                <bool key="isElement" value="YES"/>
+                            </accessibility>
+                            <constraints>
+                                <constraint firstItem="UkI-00-hNQ" firstAttribute="centerX" secondItem="EMF-dv-IfZ" secondAttribute="centerX" id="50K-yJ-vsC"/>
+                                <constraint firstAttribute="height" constant="40" id="FGf-rk-kgX"/>
+                                <constraint firstItem="UkI-00-hNQ" firstAttribute="top" secondItem="EMF-dv-IfZ" secondAttribute="top" id="PQ5-5T-1zo"/>
+                                <constraint firstAttribute="width" constant="33" id="bFU-74-OZL"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPt-cn-eZc" customClass="CaptionRegularPrimary" customModule="Openfield" customModuleProvider="target">
+                    <rect key="frame" x="48" y="139.5" width="279.5" height="41"/>
+                    <accessibility key="accessibilityConfiguration" identifier="EnterCodeInfoLabel">
+                        <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                    </accessibility>
+                    <string key="text">Check your SMS messages.
+We’ve sent the code to 0523770659</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uuQ-Ib-N7O">
+                    <rect key="frame" x="51" y="181.5" width="273.5" height="20.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did not receive SMS? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Yh-mk-3xr" customClass="CaptionRegularPrimary" customModule="Openfield" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="166.5" height="20.5"/>
+                            <accessibility key="accessibilityConfiguration" identifier="EnterCodeDidNotReceiveLabel">
+                                <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                            </accessibility>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resend Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1W-iF-9If" customClass="CaptionRegularValley" customModule="Openfield" customModuleProvider="target">
+                            <rect key="frame" x="171.5" y="0.0" width="102" height="20.5"/>
+                            <accessibility key="accessibilityConfiguration" identifier="EnterCodeResendCodeLabel">
+                                <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                            </accessibility>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valley Insights account doesn’t exist for this number, Please contact your Valley dealer, or Support" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fc2-5k-IEX" customClass="SubHeadlineBoldOrange" customModule="Openfield" customModuleProvider="target">
+                    <rect key="frame" x="45" y="265.5" width="285" height="57.5"/>
+                    <accessibility key="accessibilityConfiguration" identifier="EnterCodeErrorLabel">
+                        <accessibilityTraits key="traits" button="YES" staticText="YES"/>
+                    </accessibility>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Liz-bK-pEm" customClass="Button6" customModule="Openfield" customModuleProvider="target">
+                    <rect key="frame" x="24" y="348" width="327" height="52"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <accessibility key="accessibilityConfiguration" identifier="EnterCodeLoginButton">
+                        <accessibilityTraits key="traits" button="YES"/>
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="pEF-ik-zFD"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o6o-6T-9DW" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                    <rect key="frame" x="177.5" y="212" width="20" height="20"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="3dI-zj-8Xg"/>
+                        <constraint firstAttribute="height" constant="20" id="v4A-KL-lES"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="circleStrokeSpin"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Giq-6A-qWl" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="77j-6b-X3s"/>
+                <constraint firstAttribute="trailing" secondItem="Fc2-5k-IEX" secondAttribute="trailing" constant="45" id="BIy-9P-gWO"/>
+                <constraint firstItem="o6o-6T-9DW" firstAttribute="top" secondItem="uuQ-Ib-N7O" secondAttribute="bottom" constant="10" id="Gk2-rl-nNU"/>
+                <constraint firstItem="uuQ-Ib-N7O" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Gpc-6N-A5M"/>
+                <constraint firstItem="Liz-bK-pEm" firstAttribute="top" secondItem="Fc2-5k-IEX" secondAttribute="bottom" constant="25" id="LL4-e3-d4Q"/>
+                <constraint firstItem="QPt-cn-eZc" firstAttribute="top" secondItem="N5y-f8-QpU" secondAttribute="bottom" constant="25" id="Pd9-jk-sDb"/>
+                <constraint firstAttribute="bottom" secondItem="Liz-bK-pEm" secondAttribute="bottom" id="RDH-1x-7u3"/>
+                <constraint firstItem="o6o-6T-9DW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="VNZ-XX-cv6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Liz-bK-pEm" secondAttribute="trailing" constant="24" id="W0f-NY-8ol"/>
+                <constraint firstItem="Liz-bK-pEm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="YUr-Xr-NSH"/>
+                <constraint firstItem="QPt-cn-eZc" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="dt9-en-lEo"/>
+                <constraint firstItem="Fc2-5k-IEX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="45" id="m5r-oV-KwP"/>
+                <constraint firstItem="Giq-6A-qWl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="mvw-Ft-S1n"/>
+                <constraint firstItem="N5y-f8-QpU" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="n6f-t3-Byc"/>
+                <constraint firstItem="N5y-f8-QpU" firstAttribute="top" secondItem="Giq-6A-qWl" secondAttribute="bottom" constant="24" id="v4o-Jm-3bF"/>
+                <constraint firstItem="uuQ-Ib-N7O" firstAttribute="top" secondItem="QPt-cn-eZc" secondAttribute="bottom" constant="1" id="wr6-VQ-0kI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="138.40579710144928" y="130.58035714285714"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="2Yh-mk-3xr">
+            <size key="intrinsicContentSize" width="166.5" height="20.5"/>
+        </designable>
+        <designable name="Fc2-5k-IEX">
+            <size key="intrinsicContentSize" width="710" height="19.5"/>
+        </designable>
+        <designable name="Giq-6A-qWl">
+            <size key="intrinsicContentSize" width="85.5" height="20.5"/>
+        </designable>
+        <designable name="QPt-cn-eZc">
+            <size key="intrinsicContentSize" width="279.5" height="41"/>
+        </designable>
+        <designable name="T1W-iF-9If">
+            <size key="intrinsicContentSize" width="102" height="20.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

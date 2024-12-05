@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GuideCustomView" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="changeDatesLabel" destination="t3s-l3-8jd" id="6ph-rv-9UQ"/>
+                <outlet property="closeButton" destination="Q3e-XZ-sfh" id="PRX-BH-zdu"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="abX-8M-miT"/>
+                <outlet property="pinchLabel" destination="m2g-v5-HOf" id="gRF-UY-SHD"/>
+                <outlet property="tapOnCellLabel" destination="ru1-se-eK7" id="TTG-mm-7SP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="483" height="308"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="QqF-dr-SKo">
+                    <rect key="frame" x="10" y="10" width="463" height="257"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="m8w-Xc-k8f">
+                            <rect key="frame" x="0.0" y="0.0" width="463" height="95.666666666666671"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guidePinchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8T6-v4-MzP">
+                                    <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="16" id="PVi-Cv-SUz"/>
+                                        <constraint firstAttribute="height" constant="16" id="bWc-WC-oRm"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" asdasd asdasd asdasd asdasd asdasd asdasda asda sd asdasd asd asd ad asdasdasdasd asdasd asdasd asdasda asdasda sd asdasd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2g-v5-HOf" userLabel="asdasd asdasd asdasd asdasd asdasd asdasda asda sd asdasd asd asd ad asdasdasdasd asdasd asdasd asdasda asdasda sd asdasd" customClass="Title6RegularGray" customModule="Openfield" customModuleProvider="target">
+                                    <rect key="frame" x="35" y="0.0" width="393" height="95.666666666666671"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="alignment" value="natural"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guideCloseIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Q3e-XZ-sfh">
+                                    <rect key="frame" x="447" y="0.0" width="16" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="16" id="4cn-el-kuv"/>
+                                        <constraint firstAttribute="height" constant="16" id="fwK-8o-0Jo"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="jkA-OE-CyV">
+                            <rect key="frame" x="0.0" y="104.66666666666666" width="463" height="71.666666666666657"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guideTapImageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="i3T-GV-SlP">
+                                    <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="16" id="inE-0C-gBP"/>
+                                        <constraint firstAttribute="width" constant="16" id="uVc-FX-yx0"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" asdasd asdasd asdasd asdasd asdasd asdasda asda sd asdasd asd asd ad asdasdasdasd asdasd asdasd asdasda asdasda sd asdasd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ru1-se-eK7" customClass="Title6RegularGray" customModule="Openfield" customModuleProvider="target">
+                                    <rect key="frame" x="35" y="0.0" width="428" height="71.666666666666671"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="alignment" value="natural"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="0Kh-7j-rES">
+                            <rect key="frame" x="0.0" y="185.33333333333334" width="463" height="71.666666666666657"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guideChangeDatesIcon" translatesAutoresizingMaskIntoConstraints="NO" id="e1Y-c5-Rhu">
+                                    <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="16" id="2gm-oe-K5Z"/>
+                                        <constraint firstAttribute="width" constant="16" id="Keh-p6-rKd"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" asdasd asdasd asdasd asdasd asdasd asdasda asda sd asdasd asd asd ad asdasdasdasd asdasd asdasd asdasda asdasda sd asdasd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3s-l3-8jd" customClass="Title6RegularGray" customModule="Openfield" customModuleProvider="target">
+                                    <rect key="frame" x="35" y="0.0" width="428" height="71.666666666666671"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="alignment" value="natural"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="QqF-dr-SKo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="4Po-ah-66r"/>
+                <constraint firstAttribute="trailing" secondItem="QqF-dr-SKo" secondAttribute="trailing" constant="10" id="KfT-Ck-Okj"/>
+                <constraint firstItem="QqF-dr-SKo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="b5Q-Qa-OXC"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="QqF-dr-SKo" secondAttribute="bottom" constant="10" id="d6g-4w-AJn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="290.83969465648852" y="311.26760563380282"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="m2g-v5-HOf">
+            <size key="intrinsicContentSize" width="1178.6666666666667" height="24"/>
+        </designable>
+        <designable name="ru1-se-eK7">
+            <size key="intrinsicContentSize" width="1178.6666666666667" height="24"/>
+        </designable>
+        <designable name="t3s-l3-8jd">
+            <size key="intrinsicContentSize" width="1178.6666666666667" height="24"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="guideChangeDatesIcon" width="24" height="24"/>
+        <image name="guideCloseIcon" width="16" height="16"/>
+        <image name="guidePinchIcon" width="22" height="24"/>
+        <image name="guideTapImageIcon" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

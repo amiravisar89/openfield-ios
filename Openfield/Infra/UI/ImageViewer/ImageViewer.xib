@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageViewer" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="48Z-ej-fhM"/>
+                <outlet property="fieldImageView" destination="w1Z-JP-3Q0" id="ncb-WG-OZy"/>
+                <outlet property="imageBottomConst" destination="ftZ-Rg-pwN" id="xxX-0K-GBd"/>
+                <outlet property="imageLeftConst" destination="lao-6m-gqi" id="IXc-vF-YdW"/>
+                <outlet property="imageRightConst" destination="O4a-09-nzT" id="tds-JJ-eeU"/>
+                <outlet property="imageTopConst" destination="xG6-o9-U4h" id="GGk-n8-emL"/>
+                <outlet property="scrollView" destination="TzZ-Ut-tUd" id="BvM-LE-fPW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="442" height="359"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TzZ-Ut-tUd">
+                    <rect key="frame" x="0.0" y="0.0" width="442" height="359"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWJ-os-bGc">
+                            <rect key="frame" x="0.0" y="0.0" width="442" height="359"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w1Z-JP-3Q0">
+                                    <rect key="frame" x="0.0" y="0.0" width="442" height="359"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="w1Z-JP-3Q0" secondAttribute="trailing" id="O4a-09-nzT"/>
+                                <constraint firstAttribute="bottom" secondItem="w1Z-JP-3Q0" secondAttribute="bottom" id="ftZ-Rg-pwN"/>
+                                <constraint firstItem="w1Z-JP-3Q0" firstAttribute="leading" secondItem="gWJ-os-bGc" secondAttribute="leading" id="lao-6m-gqi"/>
+                                <constraint firstItem="w1Z-JP-3Q0" firstAttribute="top" secondItem="gWJ-os-bGc" secondAttribute="top" id="xG6-o9-U4h"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="gWJ-os-bGc" firstAttribute="leading" secondItem="TzZ-Ut-tUd" secondAttribute="leading" id="1dF-XT-IfR"/>
+                        <constraint firstItem="gWJ-os-bGc" firstAttribute="top" secondItem="TzZ-Ut-tUd" secondAttribute="top" id="1s7-K6-Ya0"/>
+                        <constraint firstAttribute="bottom" secondItem="gWJ-os-bGc" secondAttribute="bottom" id="2FO-UT-4Jz"/>
+                        <constraint firstItem="gWJ-os-bGc" firstAttribute="centerY" secondItem="TzZ-Ut-tUd" secondAttribute="centerY" id="DAA-dj-ulP"/>
+                        <constraint firstAttribute="trailing" secondItem="gWJ-os-bGc" secondAttribute="trailing" id="Ub2-3s-2Vc"/>
+                        <constraint firstItem="gWJ-os-bGc" firstAttribute="centerX" secondItem="TzZ-Ut-tUd" secondAttribute="centerX" id="a2h-ka-0h6"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TzZ-Ut-tUd" secondAttribute="trailing" id="YzI-qS-fSk"/>
+                <constraint firstItem="TzZ-Ut-tUd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fDP-ef-8ZE"/>
+                <constraint firstItem="TzZ-Ut-tUd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="k9t-gZ-cby"/>
+                <constraint firstAttribute="bottom" secondItem="TzZ-Ut-tUd" secondAttribute="bottom" id="tEk-hq-VaK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="160.86956521739131" y="285.60267857142856"/>
+        </view>
+    </objects>
+</document>

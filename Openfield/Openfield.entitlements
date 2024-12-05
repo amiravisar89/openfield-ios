@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>aps-environment</key>
+	<string>development</string>
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:growers-qa.o.prospera.ag</string>
+		<string>applinks:growers-staging.o.prospera.ag</string>
+		<string>applinks:m.valleyinsights-qa.prospera.ag</string>
+		<string>applinks:m.valleyinsights-staging.prospera.ag</string>
+		<string>applinks:m.vi-qa.prospera.ag</string>
+		<string>applinks:m.vi-staging.prospera.ag</string>
+		<string>applinks:valleyinsights-qa.prospera.ag</string>
+		<string>applinks:valleyinsights-staging.prospera.ag</string>
+		<string>applinks:vi-qa.prospera.ag</string>
+		<string>applinks:vi-staging.prospera.ag</string>
+		<string>applinks:growers.o.prospera.ag</string>
+		<string>applinks:m.valleyinsights.prospera.ag</string>
+		<string>applinks:m.vi.prospera.ag</string>
+		<string>applinks:valleyinsights.prospera.ag</string>
+		<string>applinks:vi.prospera.ag</string>
+		<string>applinks:l.vi-qa.prospera.ag</string>
+		<string>applinks:l.vi-staging.prospera.ag</string>
+		<string>applinks:l.vi.prospera.ag</string>
+		<string>applinks:links.vi.prospera.ag</string>
+		<string>applinks:links.vi-qa.prospera.ag</string>
+		<string>applinks:links.vi-staging.prospera.ag</string>
+	</array>
+</dict>
+</plist>

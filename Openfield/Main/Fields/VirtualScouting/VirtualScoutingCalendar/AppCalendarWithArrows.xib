@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppCalendarWithArrows" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="appCalendar" destination="JHx-LA-D9d" id="bpO-yB-pPD"/>
+                <outlet property="backwardArrow" destination="Z6K-dI-Bar" id="Y83-Zo-nnq"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="snn-fD-lEm"/>
+                <outlet property="forwardArrow" destination="dh5-xt-NeY" id="MzA-oW-DTH"/>
+                <outlet property="title" destination="bCp-zW-tsT" id="7yY-P8-kdl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="538" height="127"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="a3W-Mh-ABr">
+                    <rect key="frame" x="20" y="20" width="498" height="22"/>
+                    <subviews>
+                        <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6K-dI-Bar">
+                            <rect key="frame" x="0.0" y="0.0" width="25" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="gq1-8g-QUZ"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="left_arrow_24pt"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCp-zW-tsT" customClass="BodySemiBoldBrand" customModule="Openfield" customModuleProvider="target">
+                            <rect key="frame" x="35" y="0.0" width="428" height="22"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="alignment" value="center"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dh5-xt-NeY">
+                            <rect key="frame" x="473" y="0.0" width="25" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="LQm-IB-YE4"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="right_arrow_24pt"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="lqM-jB-lVC"/>
+                    </constraints>
+                </stackView>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yt-GK-4V2">
+                    <rect key="frame" x="0.0" y="59" width="538" height="1"/>
+                    <color key="backgroundColor" name="gray4"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="byj-KK-yxR"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHx-LA-D9d" customClass="AppCalendarCollection" customModule="Openfield" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="60" width="538" height="67"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="67" id="TME-fV-HMG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="1yt-GK-4V2" firstAttribute="top" secondItem="a3W-Mh-ABr" secondAttribute="bottom" constant="17" id="BbG-RZ-ucF"/>
+                <constraint firstItem="a3W-Mh-ABr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="ELd-b9-U9v"/>
+                <constraint firstItem="a3W-Mh-ABr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="GtG-IF-fqW"/>
+                <constraint firstAttribute="trailing" secondItem="1yt-GK-4V2" secondAttribute="trailing" id="Ps4-ab-TMA"/>
+                <constraint firstAttribute="trailing" secondItem="a3W-Mh-ABr" secondAttribute="trailing" constant="20" id="S7V-oc-TDv"/>
+                <constraint firstItem="JHx-LA-D9d" firstAttribute="top" secondItem="1yt-GK-4V2" secondAttribute="bottom" id="chj-xg-mEq"/>
+                <constraint firstItem="JHx-LA-D9d" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dtJ-hI-4eB"/>
+                <constraint firstAttribute="trailing" secondItem="JHx-LA-D9d" secondAttribute="trailing" id="ikO-TB-LbS"/>
+                <constraint firstItem="1yt-GK-4V2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sOR-y2-QaI"/>
+                <constraint firstAttribute="bottom" secondItem="JHx-LA-D9d" secondAttribute="bottom" id="txc-3t-DfU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="294.6564885496183" y="606.69014084507046"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="bCp-zW-tsT"/>
+    </designables>
+    <resources>
+        <image name="left_arrow_24pt" width="24" height="24"/>
+        <image name="right_arrow_24pt" width="24" height="24"/>
+        <namedColor name="gray4">
+            <color red="0.83137254901960789" green="0.83137254901960789" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

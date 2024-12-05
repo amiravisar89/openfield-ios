@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Averta-Regular.ttf">
+            <string>Averta-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YourRollCell" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="kKM-iv-H39"/>
+                <outlet property="subtitleLabel" destination="IR2-GH-Cu6" id="RUb-W6-Gn9"/>
+                <outlet property="titleLabel" destination="DM9-pd-jRR" id="4cj-X4-GHt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My role" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM9-pd-jRR" customClass="BodyBoldPrimary" customModule="Openfield" customModuleProvider="target">
+                    <rect key="frame" x="42" y="14.5" width="228" height="20"/>
+                    <accessibility key="accessibilityConfiguration" identifier="notificationCellMainText"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="alignment" value="left"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="role-icon" translatesAutoresizingMaskIntoConstraints="NO" id="HoJ-0F-CIO">
+                    <rect key="frame" x="-5" y="3" width="34" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="xv2-JI-4fe"/>
+                        <constraint firstAttribute="width" constant="34" id="zmF-Jr-Y1Q"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="gbO-aI-BWp">
+                    <rect key="frame" x="390" y="12.5" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="7ju-Db-EpP"/>
+                        <constraint firstAttribute="height" constant="24" id="YaU-Co-5DZ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IR2-GH-Cu6">
+                    <rect key="frame" x="42" y="44.5" width="330" height="0.0"/>
+                    <accessibility key="accessibilityConfiguration" identifier="notificationCellMainText"/>
+                    <fontDescription key="fontDescription" name="Averta-Regular" family="Averta" pointSize="13"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="alignment" value="left"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="gbO-aI-BWp" firstAttribute="centerY" secondItem="HoJ-0F-CIO" secondAttribute="centerY" id="10T-Wc-2Lm"/>
+                <constraint firstItem="DM9-pd-jRR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14.5" id="6IW-e3-tcj"/>
+                <constraint firstItem="DM9-pd-jRR" firstAttribute="leading" secondItem="HoJ-0F-CIO" secondAttribute="trailing" constant="13" id="DIR-ux-w1A"/>
+                <constraint firstAttribute="trailing" secondItem="gbO-aI-BWp" secondAttribute="trailing" id="Gmu-GT-MgT"/>
+                <constraint firstItem="HoJ-0F-CIO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="3" id="K9A-wz-6Lq"/>
+                <constraint firstItem="IR2-GH-Cu6" firstAttribute="leading" secondItem="DM9-pd-jRR" secondAttribute="leading" id="O5W-2f-8sC"/>
+                <constraint firstItem="gbO-aI-BWp" firstAttribute="leading" secondItem="DM9-pd-jRR" secondAttribute="trailing" constant="120" id="dED-gL-mm9"/>
+                <constraint firstItem="IR2-GH-Cu6" firstAttribute="top" secondItem="DM9-pd-jRR" secondAttribute="bottom" constant="10" id="ej3-w0-VP7"/>
+                <constraint firstItem="HoJ-0F-CIO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-5" id="hWW-AP-Wqc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HoJ-0F-CIO" secondAttribute="bottom" constant="36" id="oPL-KO-yVY"/>
+                <constraint firstAttribute="trailing" secondItem="IR2-GH-Cu6" secondAttribute="trailing" constant="42" id="wbo-us-Kav"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="DM9-pd-jRR">
+            <size key="intrinsicContentSize" width="56.5" height="20.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="account_arrow" width="24" height="25"/>
+        <image name="role-icon" width="40" height="40"/>
+    </resources>
+</document>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnalysisTabItem" customModule="Openfield" customModuleProvider="target">
+            <connections>
+                <outlet property="contentStackView" destination="xQB-3f-NAQ" id="6nn-gW-hJ0"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="UJO-F6-q1T"/>
+                <outlet property="emptyContentView" destination="e9L-3Y-p5X" id="dw0-Pg-b3c"/>
+                <outlet property="tabContent" destination="k2d-zc-gA7" id="oOv-JX-XTQ"/>
+                <outlet property="tabImage" destination="J3V-k6-sPc" id="hf8-SB-jVh"/>
+                <outlet property="tabTitle" destination="cmP-z3-rVl" id="l6l-uC-Dp0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="AnalysisTabItem" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="191" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WyE-Iy-Kc8">
+                    <rect key="frame" x="0.0" y="0.0" width="191" height="105"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xQB-3f-NAQ">
+                            <rect key="frame" x="70.5" y="10" width="50" height="85"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="analysis_date" translatesAutoresizingMaskIntoConstraints="NO" id="J3V-k6-sPc">
+                                    <rect key="frame" x="13" y="0.0" width="24" height="0.0"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmP-z3-rVl" customClass="SubHeadlineRegularSecondary" customModule="Openfield" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="4" width="50" height="27"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="k2d-zc-gA7" customClass="BodyRegularValleyBrand" customModule="Openfield" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="35" width="50" height="50"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="aQg-X4-VOD"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="41.5" id="dID-Ah-g0M"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9L-3Y-p5X">
+                            <rect key="frame" x="77" y="69.5" width="37.5" height="1"/>
+                            <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="ji4-Ps-nkf"/>
+                                <constraint firstAttribute="width" constant="37.5" id="wGW-8g-EFM"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="xQB-3f-NAQ" firstAttribute="centerX" secondItem="WyE-Iy-Kc8" secondAttribute="centerX" id="02W-jd-ttj"/>
+                        <constraint firstAttribute="bottom" secondItem="xQB-3f-NAQ" secondAttribute="bottom" constant="10" id="13u-bv-7Tf"/>
+                        <constraint firstItem="e9L-3Y-p5X" firstAttribute="centerY" secondItem="k2d-zc-gA7" secondAttribute="centerY" id="QND-KC-Ljk"/>
+                        <constraint firstItem="xQB-3f-NAQ" firstAttribute="top" secondItem="WyE-Iy-Kc8" secondAttribute="top" constant="10" id="XhT-fD-9DO"/>
+                        <constraint firstItem="e9L-3Y-p5X" firstAttribute="centerX" secondItem="k2d-zc-gA7" secondAttribute="centerX" id="cyz-6n-9PV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="WyE-Iy-Kc8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="OPS-rd-zZW"/>
+                <constraint firstAttribute="bottom" secondItem="WyE-Iy-Kc8" secondAttribute="bottom" id="U8A-KG-sk8"/>
+                <constraint firstAttribute="trailing" secondItem="WyE-Iy-Kc8" secondAttribute="trailing" id="x9m-x1-fnt"/>
+                <constraint firstItem="WyE-Iy-Kc8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zVr-zP-ZOm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-284.78260869565219" y="205.24553571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="analysis_date" width="24" height="24"/>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

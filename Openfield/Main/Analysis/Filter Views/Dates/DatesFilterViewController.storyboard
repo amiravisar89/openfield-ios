@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dates Filter View Controller-->
+        <scene sceneID="OOz-ra-ZyC">
+            <objects>
+                <viewController storyboardIdentifier="DatesFilterViewController" id="dKw-Kc-cIr" customClass="DatesFilterViewController" customModule="Openfield" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yVC-Bg-Kmk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZJ-ci-FQw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yw5-BU-wKX" customClass="BodyRegularValleyBrand" customModule="Openfield" customModuleProvider="target">
+                                        <rect key="frame" x="186" y="19.5" width="42" height="21"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_arrow_24pt" translatesAutoresizingMaskIntoConstraints="NO" id="pVD-uI-Qiz">
+                                        <rect key="frame" x="354" y="0.0" width="60" height="60"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left_arrow_24pt" translatesAutoresizingMaskIntoConstraints="NO" id="ssB-UD-9i8">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration" identifier="datesFilterViewSlider">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ssB-UD-9i8" secondAttribute="bottom" id="3qR-lS-J4Q"/>
+                                    <constraint firstItem="ssB-UD-9i8" firstAttribute="leading" secondItem="tZJ-ci-FQw" secondAttribute="leading" id="8r2-hW-ZPd"/>
+                                    <constraint firstItem="pVD-uI-Qiz" firstAttribute="top" secondItem="tZJ-ci-FQw" secondAttribute="top" id="916-9Q-GZp"/>
+                                    <constraint firstAttribute="trailing" secondItem="pVD-uI-Qiz" secondAttribute="trailing" id="J8q-kJ-Vm0"/>
+                                    <constraint firstItem="pVD-uI-Qiz" firstAttribute="width" secondItem="tZJ-ci-FQw" secondAttribute="height" multiplier="1:1" id="LCb-ch-yVI"/>
+                                    <constraint firstItem="ssB-UD-9i8" firstAttribute="top" secondItem="tZJ-ci-FQw" secondAttribute="top" id="STo-5C-sy0"/>
+                                    <constraint firstItem="yw5-BU-wKX" firstAttribute="centerY" secondItem="tZJ-ci-FQw" secondAttribute="centerY" id="ZOf-5x-njC"/>
+                                    <constraint firstItem="yw5-BU-wKX" firstAttribute="centerX" secondItem="tZJ-ci-FQw" secondAttribute="centerX" id="cG1-t8-TZw"/>
+                                    <constraint firstAttribute="bottom" secondItem="pVD-uI-Qiz" secondAttribute="bottom" id="hUs-N1-EHk"/>
+                                    <constraint firstItem="ssB-UD-9i8" firstAttribute="width" secondItem="tZJ-ci-FQw" secondAttribute="height" multiplier="1:1" id="kUA-SM-00H"/>
+                                    <constraint firstAttribute="height" constant="60" id="lBE-1Q-5wk"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VJT-88-2P7" customClass="CollectionView" customModule="CollectionKit">
+                                <rect key="frame" x="0.0" y="100" width="414" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="rbW-7o-oOc"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIr-Wo-XjK" customClass="Button2" customModule="Openfield" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="234" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration" identifier="datesFilterCloseButton">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Go2-Xc-rDz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CS3-tq-m6p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tZJ-ci-FQw" firstAttribute="leading" secondItem="CS3-tq-m6p" secondAttribute="leading" id="58d-a9-LVU"/>
+                            <constraint firstItem="VJT-88-2P7" firstAttribute="top" secondItem="tZJ-ci-FQw" secondAttribute="bottom" id="Byr-OX-GKO"/>
+                            <constraint firstItem="tZJ-ci-FQw" firstAttribute="top" secondItem="CS3-tq-m6p" secondAttribute="top" id="LvL-w6-9zf"/>
+                            <constraint firstItem="VJT-88-2P7" firstAttribute="leading" secondItem="CS3-tq-m6p" secondAttribute="leading" id="OjC-co-rhY"/>
+                            <constraint firstItem="CS3-tq-m6p" firstAttribute="trailing" secondItem="HIr-Wo-XjK" secondAttribute="trailing" id="RhC-Ik-QKu"/>
+                            <constraint firstItem="HIr-Wo-XjK" firstAttribute="top" secondItem="VJT-88-2P7" secondAttribute="bottom" id="WdM-hQ-sda"/>
+                            <constraint firstItem="CS3-tq-m6p" firstAttribute="trailing" secondItem="VJT-88-2P7" secondAttribute="trailing" id="dAm-NX-vGJ"/>
+                            <constraint firstItem="CS3-tq-m6p" firstAttribute="trailing" secondItem="tZJ-ci-FQw" secondAttribute="trailing" id="lkV-J3-N2j"/>
+                            <constraint firstItem="HIr-Wo-XjK" firstAttribute="leading" secondItem="CS3-tq-m6p" secondAttribute="leading" id="yJ6-AH-q39"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeBtn" destination="HIr-Wo-XjK" id="Zyp-fj-hCL"/>
+                        <outlet property="dateCollection" destination="VJT-88-2P7" id="glL-44-gEI"/>
+                        <outlet property="dateLabel" destination="yw5-BU-wKX" id="zzT-JA-SFi"/>
+                        <outlet property="leftArrowBtn" destination="ssB-UD-9i8" id="eod-BT-AhU"/>
+                        <outlet property="rightArrowBtn" destination="pVD-uI-Qiz" id="g3c-xy-Ylo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="odf-sj-Biz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.637681159420293" y="79.6875"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="yw5-BU-wKX">
+            <size key="intrinsicContentSize" width="41.5" height="20.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="left_arrow_24pt" width="24" height="24"/>
+        <image name="right_arrow_24pt" width="24" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

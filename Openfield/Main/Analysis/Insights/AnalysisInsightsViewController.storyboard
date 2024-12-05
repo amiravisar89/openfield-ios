@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Analysis Insights View Controller-->
+        <scene sceneID="S5Z-DK-wJh">
+            <objects>
+                <viewController storyboardIdentifier="AnalysisInsightsViewController" id="fx5-O1-vMM" customClass="AnalysisInsightsViewController" customModule="Openfield" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IS6-Sz-W39">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8YL-2J-qmy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="203"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="TcO-Tl-BB7"/>
+                                </constraints>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UAB-M4-9HO" customClass="Button2" customModule="Openfield" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="247" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zyz-F6-by7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Sc-rk-il3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8YL-2J-qmy" firstAttribute="trailing" secondItem="6Sc-rk-il3" secondAttribute="trailing" id="12U-bb-qsw"/>
+                            <constraint firstItem="6Sc-rk-il3" firstAttribute="trailing" secondItem="UAB-M4-9HO" secondAttribute="trailing" id="8zW-bn-ad4"/>
+                            <constraint firstItem="8YL-2J-qmy" firstAttribute="top" secondItem="6Sc-rk-il3" secondAttribute="top" id="AWv-wt-jQI"/>
+                            <constraint firstItem="8YL-2J-qmy" firstAttribute="leading" secondItem="6Sc-rk-il3" secondAttribute="leading" id="DKn-bd-7pB"/>
+                            <constraint firstItem="UAB-M4-9HO" firstAttribute="leading" secondItem="6Sc-rk-il3" secondAttribute="leading" id="SWc-Cu-46E"/>
+                            <constraint firstItem="UAB-M4-9HO" firstAttribute="top" secondItem="8YL-2J-qmy" secondAttribute="bottom" id="hHw-8z-p2a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeBtn" destination="UAB-M4-9HO" id="5Pz-uO-ZMz"/>
+                        <outlet property="insightsTable" destination="8YL-2J-qmy" id="9RN-A6-6vb"/>
+                        <outlet property="tableTotalHeight" destination="TcO-Tl-BB7" id="d4F-Tq-Zto"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROK-ru-LgN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-433.33333333333337" y="98.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
